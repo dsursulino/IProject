@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>PR-XPS</Machine>
+    <WindowsUser>dursulino</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>14203690-679d-11e5-8220-af9de7bffe60</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\build\phone\bld\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\build\phone\debug\x86\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\SplashScreenPhone.scale-240.png">
+      <PackagePath>images\SplashScreenPhone.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Square150x150Logo.scale-240.png">
+      <PackagePath>images\Square150x150Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Square44x44Logo.scale-240.png">
+      <PackagePath>images\Square44x44Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Square71x71Logo.scale-240.png">
+      <PackagePath>images\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\StoreLogo.scale-240.png">
+      <PackagePath>images\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\images\Wide310x150Logo.scale-240.png">
+      <PackagePath>images\Wide310x150Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\images\logo_iproject.png">
+      <PackagePath>www\images\logo_iproject.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-animate.js">
+      <PackagePath>www\contents\AngularJS\angular-animate.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-animate.min.js">
+      <PackagePath>www\contents\AngularJS\angular-animate.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-aria.js">
+      <PackagePath>www\contents\AngularJS\angular-aria.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-aria.min.js">
+      <PackagePath>www\contents\AngularJS\angular-aria.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-cookies.js">
+      <PackagePath>www\contents\AngularJS\angular-cookies.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-cookies.min.js">
+      <PackagePath>www\contents\AngularJS\angular-cookies.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-loader.js">
+      <PackagePath>www\contents\AngularJS\angular-loader.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-loader.min.js">
+      <PackagePath>www\contents\AngularJS\angular-loader.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-message-format.js">
+      <PackagePath>www\contents\AngularJS\angular-message-format.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-message-format.min.js">
+      <PackagePath>www\contents\AngularJS\angular-message-format.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-messages.js">
+      <PackagePath>www\contents\AngularJS\angular-messages.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-messages.min.js">
+      <PackagePath>www\contents\AngularJS\angular-messages.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-mocks.js">
+      <PackagePath>www\contents\AngularJS\angular-mocks.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-resource.js">
+      <PackagePath>www\contents\AngularJS\angular-resource.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-resource.min.js">
+      <PackagePath>www\contents\AngularJS\angular-resource.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-route.js">
+      <PackagePath>www\contents\AngularJS\angular-route.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-route.min.js">
+      <PackagePath>www\contents\AngularJS\angular-route.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-sanitize.js">
+      <PackagePath>www\contents\AngularJS\angular-sanitize.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-sanitize.min.js">
+      <PackagePath>www\contents\AngularJS\angular-sanitize.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-scenario.js">
+      <PackagePath>www\contents\AngularJS\angular-scenario.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-touch.js">
+      <PackagePath>www\contents\AngularJS\angular-touch.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-touch.min.js">
+      <PackagePath>www\contents\AngularJS\angular-touch.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-ui-router.js">
+      <PackagePath>www\contents\AngularJS\angular-ui-router.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-ui-router.min.js">
+      <PackagePath>www\contents\AngularJS\angular-ui-router.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-winjs.js">
+      <PackagePath>www\contents\AngularJS\angular-winjs.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular.js">
+      <PackagePath>www\contents\AngularJS\angular.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular.min.js">
+      <PackagePath>www\contents\AngularJS\angular.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\js\bootstrap.js">
+      <PackagePath>www\contents\Bootstrap\js\bootstrap.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\js\bootstrap.min.js">
+      <PackagePath>www\contents\Bootstrap\js\bootstrap.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\js\npm.js">
+      <PackagePath>www\contents\Bootstrap\js\npm.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\dataTables\dataTables.bootstrap.js">
+      <PackagePath>www\contents\dataTables\dataTables.bootstrap.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\dataTables\jquery.dataTables.js">
+      <PackagePath>www\contents\dataTables\jquery.dataTables.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\excanvas.min.js">
+      <PackagePath>www\contents\flot\excanvas.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\flot-data.js">
+      <PackagePath>www\contents\flot\flot-data.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\jquery.flot.js">
+      <PackagePath>www\contents\flot\jquery.flot.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\jquery.flot.pie.js">
+      <PackagePath>www\contents\flot\jquery.flot.pie.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\jquery.flot.resize.js">
+      <PackagePath>www\contents\flot\jquery.flot.resize.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\jquery.flot.tooltip.min.js">
+      <PackagePath>www\contents\flot\jquery.flot.tooltip.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\jQuery\jquery-1.11.1.min.js">
+      <PackagePath>www\contents\jQuery\jquery-1.11.1.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\jQuery\jquery-2.1.1.min.js">
+      <PackagePath>www\contents\jQuery\jquery-2.1.1.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\metisMenu\metisMenu.js">
+      <PackagePath>www\contents\metisMenu\metisMenu.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\metisMenu\metisMenu.min.js">
+      <PackagePath>www\contents\metisMenu\metisMenu.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\morris\morris-data.js">
+      <PackagePath>www\contents\morris\morris-data.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\morris\morris.js">
+      <PackagePath>www\contents\morris\morris.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\morris\morris.min.js">
+      <PackagePath>www\contents\morris\morris.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\morris\raphael.min.js">
+      <PackagePath>www\contents\morris\raphael.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\sb-admin-2\sb-admin-2.js">
+      <PackagePath>www\contents\sb-admin-2\sb-admin-2.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\winstore-jscompat.js">
+      <PackagePath>www\contents\winstore-jscompat.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\scripts\appBundle.js">
+      <PackagePath>www\scripts\appBundle.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\scripts\Config.js">
+      <PackagePath>www\scripts\Config.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\scripts\Controllers.js">
+      <PackagePath>www\scripts\Controllers.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\scripts\Factory.js">
+      <PackagePath>www\scripts\Factory.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\scripts\index.js">
+      <PackagePath>www\scripts\index.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\scripts\platformOverrides.js">
+      <PackagePath>www\scripts\platformOverrides.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\scripts\Services.js">
+      <PackagePath>www\scripts\Services.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\scripts\winstore-jscompat.js">
+      <PackagePath>www\scripts\winstore-jscompat.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-animate.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-animate.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-aria.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-aria.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-cookies.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-cookies.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-loader.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-loader.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-message-format.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-message-format.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-messages.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-messages.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-resource.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-resource.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-route.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-route.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-sanitize.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-sanitize.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-touch.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-touch.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap-theme.css.map">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap-theme.css.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap.css.map">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap.css.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\css\font-awesome.css.map">
+      <PackagePath>www\css\font-awesome\css\font-awesome.css.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\scripts\appBundle.js.map">
+      <PackagePath>www\scripts\appBundle.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-csp.css">
+      <PackagePath>www\contents\AngularJS\angular-csp.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap-theme.css">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap-theme.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap-theme.min.css">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap-theme.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap.css">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap.min.css">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\metisMenu\css\metisMenu.css">
+      <PackagePath>www\contents\metisMenu\css\metisMenu.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\metisMenu\css\metisMenu.min.css">
+      <PackagePath>www\contents\metisMenu\css\metisMenu.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\sb-admin-2\sb-admin-2.css">
+      <PackagePath>www\contents\sb-admin-2\sb-admin-2.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\css\font-awesome.css">
+      <PackagePath>www\css\font-awesome\css\font-awesome.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\css\font-awesome.min.css">
+      <PackagePath>www\css\font-awesome\css\font-awesome.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\index.css">
+      <PackagePath>www\css\index.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\errors.json">
+      <PackagePath>www\contents\AngularJS\errors.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\version.json">
+      <PackagePath>www\contents\AngularJS\version.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\version.txt">
+      <PackagePath>www\contents\AngularJS\version.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\fonts\glyphicons-halflings-regular.eot">
+      <PackagePath>www\contents\Bootstrap\fonts\glyphicons-halflings-regular.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.eot">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\fonts\glyphicons-halflings-regular.eot">
+      <PackagePath>www\css\fonts\glyphicons-halflings-regular.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\fonts\glyphicons-halflings-regular.svg">
+      <PackagePath>www\contents\Bootstrap\fonts\glyphicons-halflings-regular.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.svg">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\fonts\glyphicons-halflings-regular.svg">
+      <PackagePath>www\css\fonts\glyphicons-halflings-regular.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\fonts\glyphicons-halflings-regular.ttf">
+      <PackagePath>www\contents\Bootstrap\fonts\glyphicons-halflings-regular.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.ttf">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\fonts\glyphicons-halflings-regular.ttf">
+      <PackagePath>www\css\fonts\glyphicons-halflings-regular.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\fonts\glyphicons-halflings-regular.woff">
+      <PackagePath>www\contents\Bootstrap\fonts\glyphicons-halflings-regular.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.woff">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\fonts\glyphicons-halflings-regular.woff">
+      <PackagePath>www\css\fonts\glyphicons-halflings-regular.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.woff2">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.woff2</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\FontAwesome.otf">
+      <PackagePath>www\css\font-awesome\fonts\FontAwesome.otf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\animated.less">
+      <PackagePath>www\css\font-awesome\less\animated.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\bordered-pulled.less">
+      <PackagePath>www\css\font-awesome\less\bordered-pulled.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\core.less">
+      <PackagePath>www\css\font-awesome\less\core.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\fixed-width.less">
+      <PackagePath>www\css\font-awesome\less\fixed-width.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\font-awesome.less">
+      <PackagePath>www\css\font-awesome\less\font-awesome.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\icons.less">
+      <PackagePath>www\css\font-awesome\less\icons.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\larger.less">
+      <PackagePath>www\css\font-awesome\less\larger.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\list.less">
+      <PackagePath>www\css\font-awesome\less\list.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\mixins.less">
+      <PackagePath>www\css\font-awesome\less\mixins.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\path.less">
+      <PackagePath>www\css\font-awesome\less\path.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\rotated-flipped.less">
+      <PackagePath>www\css\font-awesome\less\rotated-flipped.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\spinning.less">
+      <PackagePath>www\css\font-awesome\less\spinning.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\stacked.less">
+      <PackagePath>www\css\font-awesome\less\stacked.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\variables.less">
+      <PackagePath>www\css\font-awesome\less\variables.less</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\font-awesome.scss">
+      <PackagePath>www\css\font-awesome\scss\font-awesome.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_animated.scss">
+      <PackagePath>www\css\font-awesome\scss\_animated.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_bordered-pulled.scss">
+      <PackagePath>www\css\font-awesome\scss\_bordered-pulled.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_core.scss">
+      <PackagePath>www\css\font-awesome\scss\_core.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_fixed-width.scss">
+      <PackagePath>www\css\font-awesome\scss\_fixed-width.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_icons.scss">
+      <PackagePath>www\css\font-awesome\scss\_icons.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_larger.scss">
+      <PackagePath>www\css\font-awesome\scss\_larger.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_list.scss">
+      <PackagePath>www\css\font-awesome\scss\_list.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_mixins.scss">
+      <PackagePath>www\css\font-awesome\scss\_mixins.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_path.scss">
+      <PackagePath>www\css\font-awesome\scss\_path.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_rotated-flipped.scss">
+      <PackagePath>www\css\font-awesome\scss\_rotated-flipped.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_spinning.scss">
+      <PackagePath>www\css\font-awesome\scss\_spinning.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_stacked.scss">
+      <PackagePath>www\css\font-awesome\scss\_stacked.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_variables.scss">
+      <PackagePath>www\css\font-awesome\scss\_variables.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\images\logo_iproject.jpg">
+      <PackagePath>www\images\logo_iproject.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\index.html">
+      <PackagePath>www\index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\Views\View-Inicial.html">
+      <PackagePath>www\Views\View-Inicial.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\www\Views\View-Sobre.html">
+      <PackagePath>www\Views\View-Sobre.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\dursulino\Documents\Visual Studio 2015\Projects\Practicar.Nimble\Practicar.Nimble.IProject\platforms\windows\build\phone\debug\x86\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Phone.WinJS.2.1\1.0\">
+      <Name>Microsoft.Phone.WinJS.2.1</Name>
+      <Version>1.0.9651.0</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.Phone.WinJS.2.1, MinVersion=1.0.9651.0</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\Microsoft.Phone.WinJS.2.1\1.0\Microsoft.Phone.WinJS.2.1.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
