@@ -7,11 +7,11 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="io.cordova.myapp2ad9dd" Publisher="CN=$username$" Version="1.0.0.1" ProcessorArchitecture="x86" />
-  <mp:PhoneIdentity PhoneProductId="14203690-679d-11e5-8220-af9de7bffe60" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
+  <Identity Name="practicar.nimble.Iproject" Publisher="CN=$username$" Version="1.0.0.1" ProcessorArchitecture="x86" />
+  <mp:PhoneIdentity PhoneProductId="96c91990-6950-11e5-9d06-5903013606a1" PhonePublisherId="db093ed5-53b1-45f7-af72-751e8f36ab80" />
   <Properties>
-    <DisplayName>Practicar.Nimble.IProject</DisplayName>
-    <PublisherDisplayName>Apache Cordova Team</PublisherDisplayName>
+    <DisplayName>Nimble</DisplayName>
+    <PublisherDisplayName>Practicar Desenvolvimentos</PublisherDisplayName>
     <Logo>images\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -19,11 +19,11 @@
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
   <Resources>
-    <Resource Language="EN-US" />
+    <Resource Language="PT-BR" />
   </Resources>
   <Applications>
-    <Application Id="io.cordova.myapp2ad9dd" StartPage="www/index.html">
-      <m3:VisualElements BackgroundColor="transparent" Description="CordovaApp" DisplayName="Practicar.Nimble.IProject" ForegroundText="light" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+    <Application Id="practicar.nimble.Iproject" StartPage="www/index.html">
+      <m3:VisualElements BackgroundColor="transparent" Description="CordovaApp" DisplayName="Nimble" ForegroundText="light" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
         <m3:DefaultTile Square71x71Logo="images\Square71x71Logo.png" Wide310x150Logo="images\Wide310x150Logo.png">
           <m3:ShowNameOnTiles>
             <m3:ShowOn Tile="square150x150Logo" />
@@ -46,8 +46,8 @@
     <build:Item Name="VisualStudio" Version="14.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Enterprise 2015" />
     <build:Item Name="OperatingSystem" Version="6.3.9600.16384 (winblue_rtm.130821-1623)" />
-    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.23121.0" />
-    <build:Item Name="ProjectGUID" Value="31b67a35-9503-4213-857e-f44eb42ae549" />
+    <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.23311.4" />
+    <build:Item Name="ProjectGUID" Value="61084a1e-4dc0-4973-837d-bf0d604884c8" />
     <build:Item Name="MakePri.exe" Version="6.3.9600.17336 (winblue.150226-1500)" />
   </build:Metadata>
 </Package>
