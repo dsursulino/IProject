@@ -1,0 +1,711 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>BKS-02</Machine>
+    <WindowsUser>DenisRenam</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>debug|anycpu</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>io.cordova.myapp2ad9dd</PackageIdentityName>
+    <IntermediateOutputPath>D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>DDA76657291539E7880D17C92D10CAB4511F07A2DF5B11CC62D725F099AE3434</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>io.cordova.myapp2ad9dd_1.0.0.1_neutral__h35559jr9hy9m</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>io.cordova.myapp2ad9dd_h35559jr9hy9m!io.cordova.myapp2ad9dd</RegisteredUserModeAppID>
+    <RegisteredPackageID>io.cordova.myapp2ad9dd</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Apache Cordova Team</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.1</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\build\windows\debug\anycpu\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-10-02T21:57:50.983</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-10-02T21:57:39.179</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-10-02T21:57:39.085</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-10-02T21:57:39.101</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-10-02T21:57:39.132</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+      <Modified>2015-10-02T21:57:35.633</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-10-02T21:57:39.132</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+      <Modified>2015-10-02T21:57:35.633</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-10-02T21:57:39.147</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-10-02T21:57:39.147</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\images\logo_iproject.png">
+      <PackagePath>www\images\logo_iproject.png</PackagePath>
+      <Modified>2015-10-02T21:57:38.195</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-animate.js">
+      <PackagePath>www\contents\AngularJS\angular-animate.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.397</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-animate.min.js">
+      <PackagePath>www\contents\AngularJS\angular-animate.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.413</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-aria.js">
+      <PackagePath>www\contents\AngularJS\angular-aria.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.413</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-aria.min.js">
+      <PackagePath>www\contents\AngularJS\angular-aria.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.413</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-cookies.js">
+      <PackagePath>www\contents\AngularJS\angular-cookies.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.429</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-cookies.min.js">
+      <PackagePath>www\contents\AngularJS\angular-cookies.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.429</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-loader.js">
+      <PackagePath>www\contents\AngularJS\angular-loader.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.444</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-loader.min.js">
+      <PackagePath>www\contents\AngularJS\angular-loader.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.444</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-message-format.js">
+      <PackagePath>www\contents\AngularJS\angular-message-format.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.460</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-message-format.min.js">
+      <PackagePath>www\contents\AngularJS\angular-message-format.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.460</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-messages.js">
+      <PackagePath>www\contents\AngularJS\angular-messages.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.460</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-messages.min.js">
+      <PackagePath>www\contents\AngularJS\angular-messages.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.476</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-mocks.js">
+      <PackagePath>www\contents\AngularJS\angular-mocks.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-resource.js">
+      <PackagePath>www\contents\AngularJS\angular-resource.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.491</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-resource.min.js">
+      <PackagePath>www\contents\AngularJS\angular-resource.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.507</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-route.js">
+      <PackagePath>www\contents\AngularJS\angular-route.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.507</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-route.min.js">
+      <PackagePath>www\contents\AngularJS\angular-route.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.522</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-sanitize.js">
+      <PackagePath>www\contents\AngularJS\angular-sanitize.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.522</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-sanitize.min.js">
+      <PackagePath>www\contents\AngularJS\angular-sanitize.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.538</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-scenario.js">
+      <PackagePath>www\contents\AngularJS\angular-scenario.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.647</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-touch.js">
+      <PackagePath>www\contents\AngularJS\angular-touch.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.647</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-touch.min.js">
+      <PackagePath>www\contents\AngularJS\angular-touch.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.663</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-ui-router.js">
+      <PackagePath>www\contents\AngularJS\angular-ui-router.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.679</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-ui-router.min.js">
+      <PackagePath>www\contents\AngularJS\angular-ui-router.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.679</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-winjs.js">
+      <PackagePath>www\contents\AngularJS\angular-winjs.js</PackagePath>
+      <Modified>2015-10-02T21:57:37.789</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular.js">
+      <PackagePath>www\contents\AngularJS\angular.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.776</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular.min.js">
+      <PackagePath>www\contents\AngularJS\angular.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.823</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\js\bootstrap.js">
+      <PackagePath>www\contents\Bootstrap\js\bootstrap.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.886</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\js\bootstrap.min.js">
+      <PackagePath>www\contents\Bootstrap\js\bootstrap.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.901</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\js\npm.js">
+      <PackagePath>www\contents\Bootstrap\js\npm.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\dataTables\dataTables.bootstrap.js">
+      <PackagePath>www\contents\dataTables\dataTables.bootstrap.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\dataTables\jquery.dataTables.js">
+      <PackagePath>www\contents\dataTables\jquery.dataTables.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.995</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\excanvas.min.js">
+      <PackagePath>www\contents\flot\excanvas.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:39.995</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\flot-data.js">
+      <PackagePath>www\contents\flot\flot-data.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.011</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\jquery.flot.js">
+      <PackagePath>www\contents\flot\jquery.flot.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.026</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\jquery.flot.pie.js">
+      <PackagePath>www\contents\flot\jquery.flot.pie.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.026</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\jquery.flot.resize.js">
+      <PackagePath>www\contents\flot\jquery.flot.resize.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\flot\jquery.flot.tooltip.min.js">
+      <PackagePath>www\contents\flot\jquery.flot.tooltip.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\jQuery\jquery-1.11.1.min.js">
+      <PackagePath>www\contents\jQuery\jquery-1.11.1.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.073</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\jQuery\jquery-2.1.1.min.js">
+      <PackagePath>www\contents\jQuery\jquery-2.1.1.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.089</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\metisMenu\metisMenu.js">
+      <PackagePath>www\contents\metisMenu\metisMenu.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.120</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\metisMenu\metisMenu.min.js">
+      <PackagePath>www\contents\metisMenu\metisMenu.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.120</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\morris\morris-data.js">
+      <PackagePath>www\contents\morris\morris-data.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.136</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\morris\morris.js">
+      <PackagePath>www\contents\morris\morris.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.136</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\morris\morris.min.js">
+      <PackagePath>www\contents\morris\morris.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.151</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\morris\raphael.min.js">
+      <PackagePath>www\contents\morris\raphael.min.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.183</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\exchange.js">
+      <PackagePath>www\contents\office365\scripts\exchange.js</PackagePath>
+      <Modified>2015-10-02T21:57:37.961</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\InAppBrowserOverride.js">
+      <PackagePath>www\contents\office365\scripts\InAppBrowserOverride.js</PackagePath>
+      <Modified>2015-10-02T21:57:37.977</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\o365auth.js">
+      <PackagePath>www\contents\office365\scripts\o365auth.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\o365discovery.js">
+      <PackagePath>www\contents\office365\scripts\o365discovery.js</PackagePath>
+      <Modified>2015-10-02T21:57:37.977</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\o365loader.js">
+      <PackagePath>www\contents\office365\scripts\o365loader.js</PackagePath>
+      <Modified>2015-10-02T21:57:37.977</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\sharepoint.js">
+      <PackagePath>www\contents\office365\scripts\sharepoint.js</PackagePath>
+      <Modified>2015-10-02T21:57:37.992</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\utility.js">
+      <PackagePath>www\contents\office365\scripts\utility.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.245</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\require\r.js">
+      <PackagePath>www\contents\require\r.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.355</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\require\require.js">
+      <PackagePath>www\contents\require\require.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.386</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\sb-admin-2\sb-admin-2.js">
+      <PackagePath>www\contents\sb-admin-2\sb-admin-2.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.386</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.401</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.292</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+      <Modified>2015-10-02T21:57:41.448</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\appBundle.js">
+      <PackagePath>www\scripts\appBundle.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.448</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\Config.js">
+      <PackagePath>www\scripts\Config.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\Controllers.js">
+      <PackagePath>www\scripts\Controllers.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\controllers\navBarInformacaoController.js">
+      <PackagePath>www\scripts\controllers\navBarInformacaoController.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\controllers\projetoController.js">
+      <PackagePath>www\scripts\controllers\projetoController.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\Factory.js">
+      <PackagePath>www\scripts\Factory.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\index.js">
+      <PackagePath>www\scripts\index.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\Main.js">
+      <PackagePath>www\scripts\Main.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.211</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\platformOverrides.js">
+      <PackagePath>www\scripts\platformOverrides.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.246</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\Services.js">
+      <PackagePath>www\scripts\Services.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\winstore-jscompat.js">
+      <PackagePath>www\scripts\winstore-jscompat.js</PackagePath>
+      <Modified>2015-10-02T21:57:38.261</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\services\office365\scripts\InAppBrowserOverride.js">
+      <PackagePath>www\services\office365\scripts\InAppBrowserOverride.js</PackagePath>
+      <Modified>2015-10-02T21:57:40.480</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-animate.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-animate.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.680</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-aria.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-aria.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.696</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-cookies.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-cookies.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.711</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-loader.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-loader.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.711</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-message-format.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-message-format.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.727</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-messages.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-messages.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.742</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-resource.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-resource.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.742</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-route.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-route.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.758</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-sanitize.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-sanitize.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.758</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-touch.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular-touch.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.789</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular.min.js.map">
+      <PackagePath>www\contents\AngularJS\angular.min.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.805</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap-theme.css.map">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap-theme.css.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.836</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap.css.map">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap.css.map</PackagePath>
+      <Modified>2015-10-02T21:57:37.836</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\css\font-awesome.css.map">
+      <PackagePath>www\css\font-awesome\css\font-awesome.css.map</PackagePath>
+      <Modified>2015-10-02T21:57:38.055</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\scripts\appBundle.js.map">
+      <PackagePath>www\scripts\appBundle.js.map</PackagePath>
+      <Modified>2015-10-02T21:57:38.195</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\angular-csp.css">
+      <PackagePath>www\contents\AngularJS\angular-csp.css</PackagePath>
+      <Modified>2015-10-02T21:57:39.429</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap-theme.css">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap-theme.css</PackagePath>
+      <Modified>2015-10-02T21:57:39.839</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap-theme.min.css">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap-theme.min.css</PackagePath>
+      <Modified>2015-10-02T21:57:39.839</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap.css">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap.css</PackagePath>
+      <Modified>2015-10-02T21:57:39.855</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\css\bootstrap.min.css">
+      <PackagePath>www\contents\Bootstrap\css\bootstrap.min.css</PackagePath>
+      <Modified>2015-10-02T21:57:39.870</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\metisMenu\css\metisMenu.css">
+      <PackagePath>www\contents\metisMenu\css\metisMenu.css</PackagePath>
+      <Modified>2015-10-02T21:57:40.089</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\metisMenu\css\metisMenu.min.css">
+      <PackagePath>www\contents\metisMenu\css\metisMenu.min.css</PackagePath>
+      <Modified>2015-10-02T21:57:40.105</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\sb-admin-2\sb-admin-2.css">
+      <PackagePath>www\contents\sb-admin-2\sb-admin-2.css</PackagePath>
+      <Modified>2015-10-02T21:57:40.386</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\css\font-awesome.css">
+      <PackagePath>www\css\font-awesome\css\font-awesome.css</PackagePath>
+      <Modified>2015-10-02T21:57:40.433</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\css\font-awesome.min.css">
+      <PackagePath>www\css\font-awesome\css\font-awesome.min.css</PackagePath>
+      <Modified>2015-10-02T21:57:40.433</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\index.css">
+      <PackagePath>www\css\index.css</PackagePath>
+      <Modified>2015-10-02T21:57:38.180</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\errors.json">
+      <PackagePath>www\contents\AngularJS\errors.json</PackagePath>
+      <Modified>2015-10-02T21:57:39.823</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\version.json">
+      <PackagePath>www\contents\AngularJS\version.json</PackagePath>
+      <Modified>2015-10-02T21:57:39.823</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\AngularJS\version.txt">
+      <PackagePath>www\contents\AngularJS\version.txt</PackagePath>
+      <Modified>2015-10-02T21:57:37.821</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\fonts\glyphicons-halflings-regular.eot">
+      <PackagePath>www\contents\Bootstrap\fonts\glyphicons-halflings-regular.eot</PackagePath>
+      <Modified>2015-10-02T21:57:37.852</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.eot">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.eot</PackagePath>
+      <Modified>2015-10-02T21:57:38.055</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\fonts\glyphicons-halflings-regular.eot">
+      <PackagePath>www\css\fonts\glyphicons-halflings-regular.eot</PackagePath>
+      <Modified>2015-10-02T21:57:38.180</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\fonts\glyphicons-halflings-regular.svg">
+      <PackagePath>www\contents\Bootstrap\fonts\glyphicons-halflings-regular.svg</PackagePath>
+      <Modified>2015-10-02T21:57:37.852</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.svg">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.svg</PackagePath>
+      <Modified>2015-10-02T21:57:38.070</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\fonts\glyphicons-halflings-regular.svg">
+      <PackagePath>www\css\fonts\glyphicons-halflings-regular.svg</PackagePath>
+      <Modified>2015-10-02T21:57:38.180</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\fonts\glyphicons-halflings-regular.ttf">
+      <PackagePath>www\contents\Bootstrap\fonts\glyphicons-halflings-regular.ttf</PackagePath>
+      <Modified>2015-10-02T21:57:37.869</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.ttf">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.ttf</PackagePath>
+      <Modified>2015-10-02T21:57:38.070</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\fonts\glyphicons-halflings-regular.ttf">
+      <PackagePath>www\css\fonts\glyphicons-halflings-regular.ttf</PackagePath>
+      <Modified>2015-10-02T21:57:38.180</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\Bootstrap\fonts\glyphicons-halflings-regular.woff">
+      <PackagePath>www\contents\Bootstrap\fonts\glyphicons-halflings-regular.woff</PackagePath>
+      <Modified>2015-10-02T21:57:37.873</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.woff">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.woff</PackagePath>
+      <Modified>2015-10-02T21:57:38.070</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\fonts\glyphicons-halflings-regular.woff">
+      <PackagePath>www\css\fonts\glyphicons-halflings-regular.woff</PackagePath>
+      <Modified>2015-10-02T21:57:38.180</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\redirectTarget.html">
+      <PackagePath>www\contents\office365\redirectTarget.html</PackagePath>
+      <Modified>2015-10-02T21:57:37.961</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\index.html">
+      <PackagePath>www\index.html</PackagePath>
+      <Modified>2015-10-02T21:57:38.195</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\Views\View-Inicial.html">
+      <PackagePath>www\Views\View-Inicial.html</PackagePath>
+      <Modified>2015-10-02T21:57:38.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\Views\View-Sobre.html">
+      <PackagePath>www\Views\View-Sobre.html</PackagePath>
+      <Modified>2015-10-02T21:57:38.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\typings\exchange.d.ts">
+      <PackagePath>www\contents\office365\scripts\typings\exchange.d.ts</PackagePath>
+      <Modified>2015-10-02T21:57:37.992</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\typings\o365auth.d.ts">
+      <PackagePath>www\contents\office365\scripts\typings\o365auth.d.ts</PackagePath>
+      <Modified>2015-10-02T21:57:37.992</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\typings\o365discovery.d.ts">
+      <PackagePath>www\contents\office365\scripts\typings\o365discovery.d.ts</PackagePath>
+      <Modified>2015-10-02T21:57:37.992</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\typings\sharepoint.d.ts">
+      <PackagePath>www\contents\office365\scripts\typings\sharepoint.d.ts</PackagePath>
+      <Modified>2015-10-02T21:57:38.008</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\scripts\typings\utility.d.ts">
+      <PackagePath>www\contents\office365\scripts\typings\utility.d.ts</PackagePath>
+      <Modified>2015-10-02T21:57:38.008</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\contents\office365\settings\typings\settings.d.ts">
+      <PackagePath>www\contents\office365\settings\typings\settings.d.ts</PackagePath>
+      <Modified>2015-10-02T21:57:38.024</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\fontawesome-webfont.woff2">
+      <PackagePath>www\css\font-awesome\fonts\fontawesome-webfont.woff2</PackagePath>
+      <Modified>2015-10-02T21:57:38.070</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\fonts\FontAwesome.otf">
+      <PackagePath>www\css\font-awesome\fonts\FontAwesome.otf</PackagePath>
+      <Modified>2015-10-02T21:57:38.086</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\animated.less">
+      <PackagePath>www\css\font-awesome\less\animated.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.086</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\bordered-pulled.less">
+      <PackagePath>www\css\font-awesome\less\bordered-pulled.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.086</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\core.less">
+      <PackagePath>www\css\font-awesome\less\core.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.086</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\fixed-width.less">
+      <PackagePath>www\css\font-awesome\less\fixed-width.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\font-awesome.less">
+      <PackagePath>www\css\font-awesome\less\font-awesome.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\icons.less">
+      <PackagePath>www\css\font-awesome\less\icons.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\larger.less">
+      <PackagePath>www\css\font-awesome\less\larger.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\list.less">
+      <PackagePath>www\css\font-awesome\less\list.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.102</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\mixins.less">
+      <PackagePath>www\css\font-awesome\less\mixins.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.117</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\path.less">
+      <PackagePath>www\css\font-awesome\less\path.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.117</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\rotated-flipped.less">
+      <PackagePath>www\css\font-awesome\less\rotated-flipped.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.117</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\spinning.less">
+      <PackagePath>www\css\font-awesome\less\spinning.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.117</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\stacked.less">
+      <PackagePath>www\css\font-awesome\less\stacked.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.133</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\less\variables.less">
+      <PackagePath>www\css\font-awesome\less\variables.less</PackagePath>
+      <Modified>2015-10-02T21:57:38.133</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\font-awesome.scss">
+      <PackagePath>www\css\font-awesome\scss\font-awesome.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.133</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_animated.scss">
+      <PackagePath>www\css\font-awesome\scss\_animated.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.133</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_bordered-pulled.scss">
+      <PackagePath>www\css\font-awesome\scss\_bordered-pulled.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.133</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_core.scss">
+      <PackagePath>www\css\font-awesome\scss\_core.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.149</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_fixed-width.scss">
+      <PackagePath>www\css\font-awesome\scss\_fixed-width.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.149</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_icons.scss">
+      <PackagePath>www\css\font-awesome\scss\_icons.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.149</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_larger.scss">
+      <PackagePath>www\css\font-awesome\scss\_larger.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.149</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_list.scss">
+      <PackagePath>www\css\font-awesome\scss\_list.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.149</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_mixins.scss">
+      <PackagePath>www\css\font-awesome\scss\_mixins.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_path.scss">
+      <PackagePath>www\css\font-awesome\scss\_path.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_rotated-flipped.scss">
+      <PackagePath>www\css\font-awesome\scss\_rotated-flipped.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_spinning.scss">
+      <PackagePath>www\css\font-awesome\scss\_spinning.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_stacked.scss">
+      <PackagePath>www\css\font-awesome\scss\_stacked.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\css\font-awesome\scss\_variables.scss">
+      <PackagePath>www\css\font-awesome\scss\_variables.scss</PackagePath>
+      <Modified>2015-10-02T21:57:38.164</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\www\images\logo_iproject.jpg">
+      <PackagePath>www\images\logo_iproject.jpg</PackagePath>
+      <Modified>2015-10-02T21:57:38.195</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+      <Modified>2015-10-02T21:57:47.842</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projetos\IProject\Practicar.Nimble.IProject\platforms\windows\build\windows\debug\anycpu\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-10-02T21:57:50.264</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\">
+      <Name>Microsoft.WinJS.2.0</Name>
+      <Version>1.0.9600.17018</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.2.0, MinVersion=1.0.9600.17018</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\Microsoft.WinJS.2.0.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
