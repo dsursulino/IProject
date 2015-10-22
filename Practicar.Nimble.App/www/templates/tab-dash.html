@@ -1,0 +1,50 @@
+<ion-view view-title="Meus Projetos">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="openMenu()"></button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-share" ng-click="openRightMenu()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding">
+
+        <div class="list card">
+            <div class="item item-divider">Mensagem</div>
+            <div class="item item-body">
+                <div>
+                    <b>{{AuthenticateResult}}</b>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-center" style="height:450px">
+            <div class="col col-center">
+                <button class="button button-block button-assertive" ng-click="signIn()">Login</button>
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider">Projetos Recentes</div>
+            <div class="item item-body">
+                <div>
+                    There is a fire in <b>sector 3</b>
+                </div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Health</div>
+            <div class="item item-body">
+                <div>
+                    You ate an apple today!
+                </div>
+            </div>
+        </div>
+        <div class="list card">
+            <div class="item item-divider">Upcoming</div>
+            <div class="item item-body">
+                <div>
+                    You have <b>29</b> meetings on your calendar tomorrow.
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
