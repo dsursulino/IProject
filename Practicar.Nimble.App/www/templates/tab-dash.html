@@ -7,44 +7,16 @@
     </ion-nav-buttons>
     <ion-content class="padding">
 
-        <div class="list card">
-            <div class="item item-divider">Mensagem</div>
+        <button class="button icon-left ion-log-in button-block " ng-click="GetProjects()">Obter</button>
+            
+        <div class="list card"  ng-repeat="project in Projects">
+            <div class="item item-divider">{{project.NomedoProjeto}}</div>
             <div class="item item-body">
                 <div>
-                    <b>{{AuthenticateResult}}</b>
+                    
                 </div>
             </div>
         </div>
-
-        <div class="row row-center" style="height:450px">
-            <div class="col col-center">
-                <button class="button button-block button-assertive" ng-click="signIn()">Login</button>
-            </div>
-        </div>
-
-        <div class="list card">
-            <div class="item item-divider">Projetos Recentes</div>
-            <div class="item item-body">
-                <div>
-                    There is a fire in <b>sector 3</b>
-                </div>
-            </div>
-        </div>
-        <div class="list card">
-            <div class="item item-divider">Health</div>
-            <div class="item item-body">
-                <div>
-                    You ate an apple today!
-                </div>
-            </div>
-        </div>
-        <div class="list card">
-            <div class="item item-divider">Upcoming</div>
-            <div class="item item-body">
-                <div>
-                    You have <b>29</b> meetings on your calendar tomorrow.
-                </div>
-            </div>
-        </div>
+      
     </ion-content>
 </ion-view>
