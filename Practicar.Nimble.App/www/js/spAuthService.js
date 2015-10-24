@@ -1,27 +1,37 @@
 ﻿
-angular.module('starter.spAuthService', [])
-.factory('spAuthenticate', function ($http, $q) {
-    var oAuth = {
+angular.module('starter.spAuthFactory', [])
+.factory('spAuthenticate', function ($http, $q, $localstorage) {
+
+
+
+    var _oAuth = {
         "SecurityToken": null,
         "Promise": null,
-        "DomainUrl": null,
-        "IsValid": false,
+        "DomainURL": null,
+        "ProjectURL": null,
+        "User": { "Login": null, "Password": null },
+        "IsAuthenticate": false,
         "Message": null
     };
+    var oAuth = $localstorage.getObject("nimble.oAuth");
+    var deferred;
+
     var authenticate = function (userId, password, url) {
 
+        _oAuth.ProjectURL = url;
         pathArray = url.split('/');
         protocol = pathArray[0];
         host = pathArray[2];
-        oAuth.DomainUrl = url = protocol + '//' + host;
+        _oAuth.DomainURL = url = protocol + '//' + host;
 
         var signInurl = url + '/_forms/default.aspx?wa=wsignin1.0';
-        var deferred = $q.defer();
-        var message = getSAMLRequest(userId, password, signInurl);
+        deferred = $q.defer();
+        var promise = deferred.promise;
+        var xmlData = getSAMLRequest(userId, password, signInurl);
         $.support.cors = true; // enable cross-domain query
         $.ajax({
             type: 'POST',
-            data: message,
+            data: xmlData,
             crossDomain: true, // had no effect, see support.cors above   
             async: false,
             url: 'https://login.microsoftonline.com/extSTS.srf',
@@ -37,18 +47,71 @@ angular.module('starter.spAuthService', [])
         });
 
         if (deferred.promise.$$state.status == 1)
-            oAuth.IsValid = true;
+            _oAuth.IsAuthenticate = true;
+
+        _oAuth.Message = deferred.promise.$$state.value;
+
+
+        promise.success = function (fn) {
+            promise.then(fn);
+            return promise;
+        }
+        promise.error = function (fn) {
+            promise.then(null, fn);
+            return promise;
+        }
+        oAuth = _oAuth
+        $localstorage.setObject("nimble.oAuth", _oAuth);
+
+        return promise;
+
+    };
+
+
+    function getExecuteREST(comand, async) {
+        deferred = $q.defer();
+        var promise = deferred.promise;
+        if (async == null) {
+            async = false;
+        }
+
+        $.ajax({
+
+            method: 'GET',
+            url: comand,
+            async: async,
+            data: oAuth.SecurityToken,
+            headers: {
+                Accept: "application/json;odata=verbose"
+            },
+            success: function (data) {
+                try {
+                    deferred.resolve(data.d);
+                } catch (e) {
+                    deferred.reject("Solicitação não realizada : " + e);
+                }
+            },
+            error: function (result, textStatus, errorThrown) {
+                deferred.reject("Solicitação inválida: " + textStatus);
+            }
+        });
 
         oAuth.Message = deferred.promise.$$state.value;
 
 
-        return oAuth;
-    };
+        promise.success = function (fn) {
+            promise.then(fn);
+            return promise;
+        }
+        promise.error = function (fn) {
+            promise.then(null, fn);
+            return promise;
+        }
 
-    return {
-        authenticate: authenticate
-    };
 
+        return promise;
+
+    }
     function getSAMLRequest(userID, password, url) {
         return '<s:Envelope \
                         xmlns:s="http://www.w3.org/2003/05/soap-envelope" \
@@ -87,7 +150,6 @@ angular.module('starter.spAuthService', [])
 
     function getBearerToken(result, url) {
 
-        var deferred = $q.defer();
 
         var securityToken = oAuth.SecurityToken = $($.parseXML(result)).find("BinarySecurityToken").text();
 
@@ -114,26 +176,15 @@ angular.module('starter.spAuthService', [])
                 }
             });
 
-
-
-            $.ajax({
-
-                method: 'GET',
-                url: 'https://practicarcloud.sharepoint.com/pwa/_api/ProjectData/Projetos',
-                async: false,
-                data: securityToken,
-                headers: {
-                    Accept: "application/json;odata=verbose"
-                },
-                success: function (data) {
-                    var ao = data;
-                },
-                error: function (result, textStatus, errorThrown) {
-                    deferred.reject("Autenticação inválida: " + textStatus);
-                }
-            });
         }
 
         return deferred;
     }
+
+    return {
+        authenticate: authenticate,
+        get: getExecuteREST,
+        oAuth: $localstorage.getObject("nimble.oAuth")
+    };
+
 });

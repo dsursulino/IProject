@@ -1,6 +1,34 @@
+/// <reference path="spAuthService.js" />
+
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function ($scope, $state, $ionicSideMenuDelegate) {
+.controller('LoginCtrl', function ($scope, $state, $ionicPopup , spAuthenticate) {
+  
+    $scope.data = {};
+
+    $scope.oAuth = {};
+
+    $scope.signIn = function () {
+
+        $scope.data.domain = 'https://practicarcloud.sharepoint.com/PWA',
+        $scope.data.username = 'dursulino@practicar.com.br',
+        $scope.data.password = 'j9x7a2q2!';
+        
+        spAuthenticate.authenticate($scope.data.username, $scope.data.password, $scope.data.domain).success(function (data) {
+            $state.go('tab.dash');
+        }).error(function (data) {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Acesso negado',
+                template: data
+            });
+        });
+
+       
+        
+    };
+})
+
+.controller('DashCtrl', function ($scope, $state, $ionicSideMenuDelegate, $ionicPopup, $localstorage, spAuthenticate) {
     $scope.openMenu = function () {
         $ionicSideMenuDelegate.toggleLeft();
     };
@@ -12,20 +40,29 @@ angular.module('starter.controllers', [])
         $state.go('tab.dash');
     };
 
-    $scope.AuthenticateResult = "";
+    $scope.Projects = {};
 
-    $scope.signIn = function () {
+    $scope.GetProjects = function () {
+
+     
+
+    
+
+        spAuthenticate.get('https://practicarcloud.sharepoint.com/pwa/_api/ProjectData/Projetos', true).success(function (data) {
+         
+
+            $scope.Projects = data.results;
 
 
-        //var SP = '',
-        //site = 'http://practicarcloud.sharepoint.com',
-        //username = 'dursulino@practicar.com.br',
-        //password = 'j9x7a2q2!';
+        }).error(function (data) {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Processamento inválido',
+                template: data
+            });
+        });
 
-        //var result = spAuthenticate.authenticate(username, password, site);
-
-
-        // $scope.AuthenticateResult = result.Message;
+        
+       
     };
 })
 
