@@ -1,0 +1,225 @@
+﻿.nimble .list .item {
+    margin-bottom: 8px !important;
+    padding: 2px 5px 2px 5px !important;
+}
+
+.nimble td {
+    vertical-align: top !important;
+}
+
+.nimble .list .item h2 {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 0;
+    overflow: hidden;
+    min-width: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 500;
+    max-width: 95%;
+}
+
+.nimble .font-size-small {
+    font-size: 11px !important;
+    font-size-adjust: 0.58;
+}
+
+
+.nimble .pull-right {
+    float: right !important;
+    position: relative !important;
+    list-style-type: none;
+    flex: 0 1 auto;
+}
+
+.nimble .border-left-green {
+    border-left: 4px solid #0AA699 !important;
+}
+
+.nimble .border-right-green {
+    border-right: 4px solid #0AA699 !important;
+}
+
+.nimble .zero-padding {
+    padding: 0px !important;
+}
+
+.nimble .item-content {
+    padding: 0px !important;
+}
+
+.nimble .zero-height {
+    height: auto;
+    min-height: 0px !important;
+    line-height: 0px !important;
+}
+
+.easy-pie-custom {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+    .easy-pie-custom canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+.easy-pie-percent {
+    display: inline-block;
+    line-height: 70px;
+    z-index: 2;
+}
+
+    .easy-pie-percent :after {
+        content: '%';
+        margin-left: 0.1em;
+        font-size: .8em;
+    }
+
+.button-custom .icon:before {
+    font-size: 14px !important;
+    height: 16PX !important;
+    min-height: 16px !important;
+}
+
+
+.status-icon {
+    background: url('../images/status.png') no-repeat;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    top: 2px;
+}
+
+    .status-icon.green {
+        background-position: -1px -1px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .status-icon.red {
+        background-position: -17px -1px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .status-icon.blue {
+        background-position: -33px -1px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .status-icon.yellow {
+        background-position: -48px -1px;
+        width: 15px;
+        height: 14px;
+    }
+
+    .status-icon.grey {
+        background-position: -64px -1px;
+        width: 14px;
+        height: 14px;
+    }
+
+/* Menu*/
+.user-info-wrapper {
+    display: block;
+    margin: 20px 31px;
+    margin-bottom: 0px;
+}
+
+    .user-info-wrapper .profile-wrapper {
+        height: 65px;
+        width: 65px;
+        border-radius: 100px;
+        overflow: hidden;
+        display: inline-block;
+        margin-right: 11px;
+        margin-top: 9px;
+        float: left;
+    }
+
+    .user-info-wrapper .user-info {
+        color: #ffffff;
+        display: inline-block;
+    }
+
+        .user-info-wrapper .user-info .status {
+            color: #929fa5;
+            font-size: 13px;
+            margin-bottom: 10px;
+            margin-top: 2px;
+            font-weight: normal;
+        }
+
+        .user-info-wrapper .user-info .profile {
+            float: right;
+            display: inline;
+        }
+
+        .user-info-wrapper .user-info .btn-set {
+            margin-top: 10px;
+        }
+
+        .user-info-wrapper .user-info .username {
+            font-size: 19px;
+        }
+
+        .user-info-wrapper .user-info .greeting {
+            font-size: 19px;
+            font-weight: 600;
+            position: relative;
+            top: 1.5px;
+        }
+
+        .user-info-wrapper .user-info a {
+            color: #ffffff;
+        }
+
+            .user-info-wrapper .user-info a:hover {
+                text-decoration: none;
+            }
+
+        .user-info-wrapper .user-info .status-icon {
+            margin: 0px 5px;
+        }
+
+        .user-info-wrapper .user-info .collapse {
+            width: 18px;
+            height: 18px;
+            background-color: #50545c;
+            position: absolute;
+            right: 15px;
+            margin-top: 10px;
+        }
+
+        .user-info-wrapper .user-info .status-icon {
+            margin: 0px 5px;
+        }
+
+        .user-info-wrapper .user-info .collapse i {
+            position: relative;
+            margin-top: -8px;
+            top: -2px;
+            left: 3px;
+        }
+
+        .user-info-wrapper .user-info .collapse:hover {
+            background-color: #000000;
+        }
+
+
+.page-sidebar {
+    background-color: #1b1e24 !important;
+    height: 100%;
+    font-family: 'Open Sans';
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+}

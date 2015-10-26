@@ -9,7 +9,7 @@ angular.module('starter.spAuthFactory', [])
         "Promise": null,
         "DomainURL": null,
         "ProjectURL": null,
-        "User": { "Login": null, "Password": null },
+        "User": { "Login": null, "Password": null, "Profile": null },
         "IsAuthenticate": false,
         "Message": null
     };
@@ -35,19 +35,43 @@ angular.module('starter.spAuthFactory', [])
             crossDomain: true, // had no effect, see support.cors above   
             async: false,
             url: 'https://login.microsoftonline.com/extSTS.srf',
-            dataType: "xml",
+            dataType: 'xml',
             success: function (data, textStatus, result) {
 
                 deferred = getBearerToken(result.responseText, signInurl);
 
             },
             error: function (result, textStatus, errorThrown) {
+
                 deferred.reject("Solicitação de Autenticação inválida: " + textStatus);
             }
         });
 
-        if (deferred.promise.$$state.status == 1)
+        if (deferred.promise.$$state.status == 1) {
             _oAuth.IsAuthenticate = true;
+            _oAuth.User.Login = userId;
+            _oAuth.User.Password = userId;
+
+            $.ajax({
+
+                method: 'GET',
+                url: oAuth.DomainURL + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
+                async: false,
+                data: oAuth.SecurityToken,
+                headers: {
+                    Accept: "application/json;odata=verbose"
+                },
+                success: function (data) {
+
+                    _oAuth.User.Profile = data.d;
+                },
+                error: function (result, textStatus, errorThrown, a, b) {
+                    result = angular.fromJson(result);
+                    var exeception = angular.fromJson(result.responseText);
+                    deferred.reject(exeception.error.message.value);
+                }
+            });
+        }
 
         _oAuth.Message = deferred.promise.$$state.value;
 
@@ -60,7 +84,9 @@ angular.module('starter.spAuthFactory', [])
             promise.then(null, fn);
             return promise;
         }
-        oAuth = _oAuth
+        oAuth = _oAuth;
+
+
         $localstorage.setObject("nimble.oAuth", _oAuth);
 
         return promise;
@@ -91,8 +117,10 @@ angular.module('starter.spAuthFactory', [])
                     deferred.reject("Solicitação não realizada : " + e);
                 }
             },
-            error: function (result, textStatus, errorThrown) {
-                deferred.reject("Solicitação inválida: " + textStatus);
+            error: function (result, textStatus, errorThrown, a, b) {
+                result = angular.fromJson(result);
+                var exeception = angular.fromJson(result.responseText);
+                deferred.reject(exeception.error.message.value);
             }
         });
 
@@ -107,6 +135,7 @@ angular.module('starter.spAuthFactory', [])
             promise.then(null, fn);
             return promise;
         }
+
 
 
         return promise;
@@ -147,13 +176,15 @@ angular.module('starter.spAuthFactory', [])
                     </s:Envelope> \
                     ';
     }
-
     function getBearerToken(result, url) {
 
 
-        var securityToken = oAuth.SecurityToken = $($.parseXML(result)).find("BinarySecurityToken").text();
+        if (ionic.Platform.isWindowsPhone())
+            oAuth.SecurityToken = $.parseXML(result).all[18].textContent;
+        else
+            oAuth.SecurityToken = $($.parseXML(result)).find("BinarySecurityToken").text();
 
-        if (securityToken.length == 0) {
+        if (oAuth.SecurityToken.length == 0) {
             deferred.reject("Token de segurança do office 365 inválido.");
         }
         else {
@@ -164,7 +195,7 @@ angular.module('starter.spAuthFactory', [])
                 method: 'POST',
                 url: url,
                 async: false,
-                data: securityToken,
+                data: oAuth.SecurityToken,
                 headers: {
                     Accept: "application/json;odata=verbose"
                 },
@@ -180,6 +211,19 @@ angular.module('starter.spAuthFactory', [])
 
         return deferred;
     }
+    function getProfile() {
+
+
+        getExecuteREST(oAuth.DomainURL + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties", true).success(function (data) {
+            oAuth.User.Profile = data;
+        }).error(function (data) {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Acesso negado ao perfil.',
+                template: data
+            });
+        });
+
+    };
 
     return {
         authenticate: authenticate,

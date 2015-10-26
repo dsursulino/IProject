@@ -31,15 +31,20 @@ angular.module('starter', ['ionic', 'nimble.utils', 'starter.controllers', 'star
     // Each state's controller can be found in controllers.js
     $stateProvider
     .state('login', {
-        url: '/login',      
+        url: '/login',
         templateUrl: 'app/auth/login.html',
         controller: 'LoginCtrl'
     })
     .state('about', {
         url: "/about",
-        templateUrl: "about.html",
-        controller: 'DashCtrl'
+        templateUrl: "about.html"
+       
     })
+    //.state('index', {
+    //    url: "/index",
+    //    templateUrl: "index.html",
+    //    controller: 'DashCtrl'
+    //})
     // setup an abstract state for the tabs directive
     .state('tab', {
         url: '/tab',
