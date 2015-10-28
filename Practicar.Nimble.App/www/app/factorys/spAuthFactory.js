@@ -55,7 +55,7 @@ angular.module('starter.spAuthFactory', [])
             $.ajax({
 
                 method: 'GET',
-                url: _oAuth.DomainURL + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
+                url: _oAuth.ProjectURL + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
                 async: false,
                 data: _oAuth.SecurityToken,
                 headers: {
@@ -63,7 +63,7 @@ angular.module('starter.spAuthFactory', [])
                 },
                 success: function (data) {
                     //  data.d.PictureUrl = data.d.PictureUrl.split('?t=')[0];
-                    data.d.Photo = _oAuth.DomainURL + "/_layouts/15/userphoto.aspx?size=S&accountname=" + data.d.Email;
+                    data.d.Photo = _oAuth.ProjectURL + "/_layouts/15/userphoto.aspx?size=S&accountname=" + data.d.Email;
                     _oAuth.User.Profile = data.d;
                 },
                 error: function (result, textStatus, errorThrown, a, b) {
@@ -96,6 +96,7 @@ angular.module('starter.spAuthFactory', [])
 
 
     function getExecuteREST(comand, async) {
+        oAuth = $localstorage.getObject("nimble.oAuth");
         deferred = $q.defer();
         var promise = deferred.promise;
         if (async == null) {

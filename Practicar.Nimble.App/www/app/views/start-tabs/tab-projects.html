@@ -1,0 +1,53 @@
+﻿<ion-view view-title="Meus Projetos">
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-more-vertical" ng-click="openRightMenu()"></button>
+    </ion-nav-buttons>
+    <ion-content class="padding nimble" ng-init="GetProjects()">
+        <ion-refresher on-refresh="GetProjects()">
+
+        </ion-refresher>
+        <ion-list>
+            <ion-item ng-repeat="project in Projects" ng-class-odd="'border-right-green'" ng-class-even="'border-left-green'">
+
+
+
+                <div class="row zero-padding">
+                    <div class="col-75 zero-padding" style="min-width: 100px !important">
+                        <div class="row row-top zero-padding">
+                            <div class="col zero-padding">
+                                <h2 class="title">
+                                    <i class="icon ion-ios-paper-outline"></i>
+                                    {{project.ProjectName}}
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="row row-center zero-padding">
+                            <div class="col zero-padding">
+                                <span class="font-size-small" style="padding-left:18px; color:darkgrey ">  Atualizidado em {{project.ProjectModifiedDate | cmdate:'dd/MM/yyyy'}} </span>
+                            </div>
+
+                        </div>
+                        <div class="row row-bottom zero-padding">
+                            <div class="col zero-padding">
+                                <div class="button-bar button-custom zero-padding">
+                                    <a class="button button-custom  button-icon icon ion-information-circled zero-height zero-padding"></a>
+                                    <a class="button button-custom  button-icon icon ion-clipboard zero-height zero-padding"></a>
+                                    <a class="button button-custom  button-icon ion-android-share-alt zero-height zero-padding"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-25 zero-padding pull-right" style="min-width:70px!important ">
+                        <div class="pull-right" style="padding: 2px!important ; padding-right:8px!important">
+                            <div id="" ng-attr-id="{{'div'+ project.ProjectId}}" name="pie-percentComplete" class="pull-right easy-pie-custom" data-percent="{{project.ProjectPercentCompleted}}" repeat-done="layoutDone()" data-spi="{{project.ProjectSPI}}"><span class="easy-pie-percent">{{project.ProjectPercentCompleted}}%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+
+        </ion-list>
+
+
+    </ion-content>
+</ion-view>
