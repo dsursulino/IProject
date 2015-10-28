@@ -90,7 +90,7 @@
 
 
 .status-icon {
-    background: url('../images/status.png') no-repeat;
+    background: url('images/status.png') no-repeat;
     position: relative;
     display: inline-block;
     margin-right: 10px;
@@ -128,10 +128,20 @@
     }
 
 /* Menu*/
+.menu-item .item
+{
+    border-left:5px solid !important;
+    border-left-color: #4b72b2 !important;
+
+}
+.menu-item .item .icon
+{
+    padding-right:8px!important;
+}
 .user-info-wrapper {
     display: block;
-    margin: 20px 31px;
-    margin-bottom: 0px;
+    margin: 10px 10px;
+    margin-bottom: 10px;
 }
 
     .user-info-wrapper .profile-wrapper {
@@ -140,8 +150,8 @@
         border-radius: 100px;
         overflow: hidden;
         display: inline-block;
-        margin-right: 11px;
-        margin-top: 9px;
+        margin-right: 5px;
+        margin-top: 2px;
         float: left;
     }
 
@@ -151,10 +161,10 @@
     }
 
         .user-info-wrapper .user-info .status {
-            color: #929fa5;
+            color: #f3f3f3;
             font-size: 13px;
-            margin-bottom: 10px;
-            margin-top: 2px;
+            margin-bottom: 0px;
+            margin-top: 5px;
             font-weight: normal;
         }
 
@@ -168,14 +178,17 @@
         }
 
         .user-info-wrapper .user-info .username {
-            font-size: 19px;
+            font-size: 17px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: bold;
         }
 
         .user-info-wrapper .user-info .greeting {
-            font-size: 19px;
+            font-size: 17px;
             font-weight: 600;
             position: relative;
-            top: 1.5px;
+            top: 1.9px;
         }
 
         .user-info-wrapper .user-info a {
@@ -193,7 +206,7 @@
         .user-info-wrapper .user-info .collapse {
             width: 18px;
             height: 18px;
-            background-color: #50545c;
+            background-color: #000000;
             position: absolute;
             right: 15px;
             margin-top: 10px;
@@ -216,10 +229,15 @@
 
 
 .page-sidebar {
-    background-color: #1b1e24 !important;
+    background-color: #4b72b2 !important;
     height: 100%;
     font-family: 'Open Sans';
     -webkit-backface-visibility: hidden;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
+  
 }
+ .teste{
+     color: #01cf1c;
+     background-color:#e5e9ec;
+ }

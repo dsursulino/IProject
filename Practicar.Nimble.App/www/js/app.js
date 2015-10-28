@@ -40,11 +40,7 @@ angular.module('starter', ['ionic', 'nimble.utils', 'starter.controllers', 'star
         templateUrl: "about.html"
        
     })
-    //.state('index', {
-    //    url: "/index",
-    //    templateUrl: "index.html",
-    //    controller: 'DashCtrl'
-    //})
+  
     // setup an abstract state for the tabs directive
     .state('tab', {
         url: '/tab',
@@ -94,6 +90,6 @@ angular.module('starter', ['ionic', 'nimble.utils', 'starter.controllers', 'star
     });
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/tab/dash');
+    $urlRouterProvider.otherwise('login');
 
 });

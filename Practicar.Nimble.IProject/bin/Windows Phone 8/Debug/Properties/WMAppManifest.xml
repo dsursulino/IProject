@@ -4,7 +4,7 @@
   <Languages xmlns="">
     <Language code="en-US" />
   </Languages>
-  <App Author="Apache Cordova Team" BitsPerPixel="32" Description="A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone." Genre="apps.normal" ProductID="{4998a770-6794-11e5-b082-93df8836121c}" Publisher="Apache Cordova Team" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="Practicar.Nimble.IProject" Version="1.0.0" xmlns="">
+  <App Author="Practicar Desenvolvimentos" BitsPerPixel="32" Description="Aplicaticos de gerecimanto de projetos para Microsoft Project Server" Genre="apps.normal" ProductID="{4b2df3e0-77ef-11e5-a65d-3543556bdf43}" Publisher="Practicar Desenvolvimentos" PublisherID="{db093ed5-53b1-45f7-af72-751e8f36ab80}" RuntimeType="Silverlight" Title="Nimble" Version="1.0.0" xmlns="">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
@@ -14,12 +14,12 @@
       <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
     </Tasks>
     <Tokens>
-      <PrimaryToken TaskName="_default" TokenID="Practicar.Nimble.IProjectToken">
+      <PrimaryToken TaskName="_default" TokenID="NimbleToken">
         <TemplateFlip>
           <SmallImageURI IsRelative="true" IsResource="false">Background.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Background.png</BackgroundImageURI>
-          <Title>Practicar.Nimble.IProject</Title>
+          <Title>Nimble</Title>
           <BackContent />
           <BackBackgroundImageURI />
           <BackTitle />

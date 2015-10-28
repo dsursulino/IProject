@@ -9,30 +9,65 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('LoginCtrl', function ($scope, $state, $ionicPopup, spAuthenticate) {
+.controller('LoginCtrl', function ($scope, $state, $ionicPopup, $ionicLoading, spAuthenticate) {
+
+    $scope.VerifyAuthenticate = function VerifyAuthenticate() {
+        if (spAuthenticate.IsAuthenticate()) {
+            $state.go('tab.dash');
+        }
+    };
+
+
 
     $scope.data = {};
 
-    $scope.oAuth = {};
+    $scope.oAuth = spAuthenticate.oAuth;
 
     $scope.signIn = function () {
 
-        $scope.data.domain = 'https://practicarcloud.sharepoint.com/PWA',
-        $scope.data.username = 'dursulino@practicar.com.br',
-        $scope.data.password = 'j9x7a2q2!';
-
-        spAuthenticate.authenticate($scope.data.username, $scope.data.password, $scope.data.domain).success(function (data) {
-            $state.go('tab.dash');
-        }).error(function (data) {
+        if ($scope.data.domain == 'debug') {
+            $scope.data.domain = 'https://practicarcloud.sharepoint.com/PWA',
+            $scope.data.username = 'jtorres@practicar.com.br',
+            $scope.data.password = 'e%kmrtcr66';
+        }
+        if ($scope.data.domain == 'debug2') {
+            $scope.data.domain = 'https://practicarcloud.sharepoint.com/sites/PWA',
+            $scope.data.username = 'dursulino@practicar.com.br',
+            $scope.data.password = 'j9x7a2q2!';
+        }
+        if ($scope.data.domain == null || $scope.data.domain == null || $scope.data.domain == null) {
             var alertPopup = $ionicPopup.alert({
                 title: 'Acesso negado',
-                template: data
+                template: 'Verifique os dados de acesso.'
             });
-        });
+        }
+        else {
+            $ionicLoading.show({
+                content: 'Loading',
+                animation: 'fade-in',
+                showBackdrop: true,
+                maxWidth: 200,
+                showDelay: 0
+            });
+            spAuthenticate.authenticate($scope.data.username, $scope.data.password, $scope.data.domain).success(function (data) {
+                $("#imgProfileUser").attr("src", spAuthenticate.oAuth().User.Profile.Photo);
+                //angular.element(document.getElementById('menuDefaultRight')).scope().$apply();
+                angular.element(document.getElementById('menuDefaultRight')).scope().Load();
+                $state.go('tab.dash');
+                $ionicLoading.hide();
 
+            }).error(function (data) {
+                $ionicLoading.hide();
+                var alertPopup = $ionicPopup.alert({
+                    title: 'Acesso negado',
+                    template: data
+                });
+            });
 
+        }
 
     };
+
 })
 
 .controller('DashCtrl', function ($scope, $state, $ionicSideMenuDelegate, $ionicPopup, $timeout, spAuthenticate) {
@@ -41,7 +76,7 @@ angular.module('starter.controllers', [])
     };
     $scope.openRightMenu = function () {
         $ionicSideMenuDelegate.toggleRight();
-        $scope.User = spAuthenticate.oAuth.User.Profile;
+
     };
 
     $scope.close = function () {
@@ -64,19 +99,39 @@ angular.module('starter.controllers', [])
     $scope.layoutDone = function () {
 
         $timeout(function () {
-            $("[name='pie-percentComplete']").easyPieChart({
-                lineWidth: 9,
-                barColor: '#7dc6ec',
-                trackColor: '#e5e9ec',
-                scaleColor: false,
-                size: 70
+            $("[name='pie-percentComplete']").each(function () {
+                var spi = (parseFloat($(this).attr("data-spi"))*100);
+                var color = '#7dc6ec';
+
+                if (spi < 80) {
+                    color = '#ff0000';
+                }
+                else if (spi >= 80 && spi < 90) {
+                    color = '#ffd803';
+                }
+                else if (spi >= 90) {
+                    color = '#01cf1c';
+                }
+                else {
+                    color = '#7dc6ec';
+                }
+
+
+                $(this).easyPieChart({
+                    lineWidth: 9,
+                    barColor: color,
+                    trackColor: '#e5e9ec',
+                    scaleColor: false,
+                    size: 70
+                });
             });
         }, 0);
 
     };
-    $scope.GetProjects = function () {
+    $scope.GetProjects = function GetProjects() {
 
-        spAuthenticate.get('https://practicarcloud.sharepoint.com/pwa/_api/ProjectData/[en-US]/Projects', true).success(function (data) {
+
+        spAuthenticate.get(spAuthenticate.oAuth().ProjectURL + '/_api/ProjectData/[en-US]/Projects', true).success(function (data) {
             $scope.Projects = data.results;
         }).error(function (data) {
             var alertPopup = $ionicPopup.alert({
@@ -85,7 +140,7 @@ angular.module('starter.controllers', [])
             });
         });
 
-
+        $scope.$broadcast('scroll.refreshComplete');
 
     };
 })
@@ -105,7 +160,7 @@ angular.module('starter.controllers', [])
         $ionicSideMenuDelegate.toggleRight();
     };
 
-    $scope.chats = Chats.all();
+    //$scope.chats = Chats.all();
     $scope.remove = function (chat) {
         Chats.remove(chat);
     };
@@ -119,14 +174,14 @@ angular.module('starter.controllers', [])
         $ionicSideMenuDelegate.toggleRight();
     };
 
-    $scope.oi = function () {
-        var alertPopup = $ionicPopup.alert({
-            title: 'foi',
-            template: oi
-        });
+    $scope.Load = function () {
+        $scope.User = spAuthenticate.oAuth().User.Profile;
     };
 
-    $scope.User = spAuthenticate.oAuth.User.Profile;
+    $scope.User = spAuthenticate.oAuth().User.Profile;
+
+
+
 })
 
 .controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {

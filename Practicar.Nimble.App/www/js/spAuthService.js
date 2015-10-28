@@ -50,19 +50,20 @@ angular.module('starter.spAuthFactory', [])
         if (deferred.promise.$$state.status == 1) {
             _oAuth.IsAuthenticate = true;
             _oAuth.User.Login = userId;
-            _oAuth.User.Password = userId;
+            _oAuth.User.Password = password;
 
             $.ajax({
 
                 method: 'GET',
-                url: oAuth.DomainURL + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
+                url: _oAuth.DomainURL + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
                 async: false,
-                data: oAuth.SecurityToken,
+                data: _oAuth.SecurityToken,
                 headers: {
                     Accept: "application/json;odata=verbose"
                 },
                 success: function (data) {
-
+                    //  data.d.PictureUrl = data.d.PictureUrl.split('?t=')[0];
+                    data.d.Photo = _oAuth.DomainURL + "/_layouts/15/userphoto.aspx?size=S&accountname=" + data.d.Email;
                     _oAuth.User.Profile = data.d;
                 },
                 error: function (result, textStatus, errorThrown, a, b) {
@@ -225,10 +226,36 @@ angular.module('starter.spAuthFactory', [])
 
     };
 
+    function IsAuthenticate() {
+        if (oAuth != null) {
+            if (oAuth.IsAuthenticate) {
+                $.ajax({
+
+                    method: 'GET',
+                    url: oAuth.DomainURL + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
+                    async: false,
+                    data: oAuth.SecurityToken,
+                    headers: {
+                        Accept: "application/json;odata=verbose"
+                    },
+                    success: function (data) {
+                        oAuth.User.Profile = data.d;
+                        return true;
+                    },
+                    error: function (result, textStatus, errorThrown, a, b) {
+                        return false;
+                    }
+                });
+            }
+            return false;
+        }
+        return false;
+    };
     return {
         authenticate: authenticate,
         get: getExecuteREST,
-        oAuth: $localstorage.getObject("nimble.oAuth")
+        oAuth: function () { return $localstorage.getObject("nimble.oAuth") },
+        IsAuthenticate: IsAuthenticate
     };
 
 });
