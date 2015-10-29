@@ -90,7 +90,7 @@
 
 
 .status-icon {
-    background: url('images/status.png') no-repeat;
+    background: url('../images/status.png') no-repeat;
     position: relative;
     display: inline-block;
     margin-right: 10px;
