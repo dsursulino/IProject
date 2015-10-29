@@ -36,6 +36,7 @@ angular.module('nimble.controllers.Login', [])
             $scope.data.password = 'j9x7a2q2!';
         }
         if ($scope.data.domain == null || $scope.data.username == null || $scope.data.password == null) {
+            $ionicLoading.hide();
             var alertPopup = $ionicPopup.alert({
                 title: 'Acesso negado',
                 template: 'Verifique os dados de acesso.'

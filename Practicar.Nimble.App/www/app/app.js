@@ -6,12 +6,15 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'nimble.factory.utils',
+                                    'nimble.factory.spAuthFactory',
+                                    'nimble.directives',
+                                    'nimble.filters',
                                     'nimble.controllers.Menu',
                                     'nimble.controllers.Login',
                                     'nimble.controllers.tabProjects',
                                     'nimble.controllers.tabAssignments',
-                                    'nimble.controllers.tabWorkflowTasks',
-                                    'starter.controllers', 'starter.services', 'starter.spAuthFactory'])
+                                    'nimble.controllers.tabWorkflowTasks'
+])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -85,17 +88,17 @@ angular.module('starter', ['ionic', 'nimble.factory.utils',
                 controller: 'workflowTasksCtrl'
             }
         }
-    })
+    });
 
-      .state('tab.chat-detail', {
-          url: '/chats/:chatId',
-          views: {
-              'tab-chats': {
-                  templateUrl: 'templates/chat-detail.html',
-                  controller: 'ChatDetailCtrl'
-              }
-          }
-      });
+    //.state('tab.chat-detail', {
+    //    url: '/chats/:chatId',
+    //    views: {
+    //        'tab-chats': {
+    //            templateUrl: 'templates/chat-detail.html',
+    //            controller: 'ChatDetailCtrl'
+    //        }
+    //    }
+    //});
 
 
 

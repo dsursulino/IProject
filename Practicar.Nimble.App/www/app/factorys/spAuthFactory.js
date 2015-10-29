@@ -1,5 +1,5 @@
 ﻿
-angular.module('starter.spAuthFactory', [])
+angular.module('nimble.factory.spAuthFactory', [])
 .factory('spAuthenticate', function ($http, $q, $localstorage) {
 
 
