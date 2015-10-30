@@ -62,8 +62,21 @@ angular.module('nimble.factory.spAuthFactory', [])
                     Accept: "application/json;odata=verbose"
                 },
                 success: function (data) {
-                    //  data.d.PictureUrl = data.d.PictureUrl.split('?t=')[0];
                     data.d.Photo = _oAuth.ProjectURL + "/_layouts/15/userphoto.aspx?size=S&accountname=" + data.d.Email;
+                    $.ajax({
+
+                        method: 'GET',
+                        url: _oAuth.ProjectURL + "/_api/ProjectData/[en-US]/Resources?$select=ResourceId&$filter=ResourceEmailAddress eq '" + data.d.Email + "'",
+                        async: false,
+                        data: _oAuth.SecurityToken,
+                        headers: {
+                            Accept: "application/json;odata=verbose"
+                        },
+                        success: function (data2) {
+                            data.d.ResourceId = data2.d.results[0].ResourceId;
+                        }
+                    });
+
                     _oAuth.User.Profile = data.d;
                 },
                 error: function (result, textStatus, errorThrown, a, b) {

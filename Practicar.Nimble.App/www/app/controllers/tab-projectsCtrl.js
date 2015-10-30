@@ -62,14 +62,16 @@ angular.module('nimble.controllers.tabProjects', [])
 
         spAuthenticate.get(spAuthenticate.oAuth().ProjectURL + '/_api/ProjectData/[en-US]/Projects', true).success(function (data) {
             $scope.Projects = data.results;
+            $scope.$broadcast('scroll.refreshComplete');
         }).error(function (data) {
             var alertPopup = $ionicPopup.alert({
                 title: 'Processamento inválido',
                 template: data
             });
+            $scope.$broadcast('scroll.refreshComplete');
         });
 
-        $scope.$broadcast('scroll.refreshComplete');
+
 
     };
 });

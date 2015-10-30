@@ -1,7 +1,7 @@
 ﻿
 angular.module('nimble.filters', [])
 
-.filter('cmdate', [
+.filter('dateFormat', [
     '$filter', function ($filter) {
         return function (input, format) {
             var date = new Date(parseInt(input.substr(6)));

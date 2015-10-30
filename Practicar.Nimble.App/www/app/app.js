@@ -5,10 +5,16 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'nimble.factory.utils',
+angular.module('starter', ['ionic',
+                                    'ngSanitize',
+                                    'ui.router',
+                                    'angular-timeline',
+                                    'angular-scroll-animate',
+                                    'nimble.factory.utils',
                                     'nimble.factory.spAuthFactory',
                                     'nimble.directives',
                                     'nimble.filters',
+                                    'nimble.service.assignment',
                                     'nimble.controllers.Menu',
                                     'nimble.controllers.Login',
                                     'nimble.controllers.tabProjects',
