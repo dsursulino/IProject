@@ -1,7 +1,7 @@
 ﻿/// <reference path="spAuthService.js" />
 angular.module('nimble.controllers.tabProjects', [])
 
-.controller('tabProjectsCtrl', function ($scope, $state, $ionicSideMenuDelegate, $ionicPopup, $timeout, spAuthenticate) {
+.controller('tabProjectsCtrl', function ($scope, $state, $ionicSideMenuDelegate, $ionicPopup, $timeout, spAuthenticate, projectService) {
 
     $scope.openRightMenu = function () {
         $ionicSideMenuDelegate.toggleRight();
@@ -58,10 +58,10 @@ angular.module('nimble.controllers.tabProjects', [])
 
     };
     $scope.GetProjects = function GetProjects() {
+        
 
-
-        spAuthenticate.get(spAuthenticate.oAuth().ProjectURL + '/_api/ProjectData/[en-US]/Projects', true).success(function (data) {
-            $scope.Projects = data.results;
+        projectService.getMyProjects().success(function (data) {
+            $scope.Projects = data;
             $scope.$broadcast('scroll.refreshComplete');
         }).error(function (data) {
             var alertPopup = $ionicPopup.alert({

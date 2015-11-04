@@ -19,14 +19,14 @@
             display: inline-block;
             width: 100%;
             color: rgb(255, 255, 255);
-            background-color: #4b72b2 ;
+            background-color: #4b72b2;
             padding: 5px;
             text-align: center;
             text-transform: uppercase;
         }
 
         .event-list > li:nth-child(even) > time {
-            background-color: #2f4975 ;
+            background-color: #2f4975;
         }
 
         .event-list > li > time > span {
@@ -57,15 +57,18 @@
         }
 
             .event-list > li > .info > .title {
-                font-size: 12pt;
+                font-size: 10pt;
                 font-weight: 700;
                 margin: 0px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             .event-list > li > .info > .desc {
-                font-size: 10pt;
+                font-size: 8pt;
                 margin: 0px;
-               
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             .event-list > li > .info > ul,
@@ -187,6 +190,8 @@
             .event-list > li > .info > .title,
             .event-list > li > .info > .desc {
                 padding: 0px 10px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             .event-list > li > .info > ul {
@@ -218,5 +223,3 @@
                         padding: 10px 0px 9px;
                     }
 }
-
-

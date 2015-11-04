@@ -35,6 +35,11 @@ angular.module('nimble.controllers.Login', [])
             $scope.data.username = 'dursulino@practicar.com.br',
             $scope.data.password = 'j9x7a2q2!';
         }
+        if ($scope.data.domain == 'debug3') {
+            $scope.data.domain = 'https://practicarcloud.sharepoint.com/sites/PWA',
+            $scope.data.username = 'nsilva@practicar.com.br',
+            $scope.data.password = 'nick.260595';
+        }
         if ($scope.data.domain == null || $scope.data.username == null || $scope.data.password == null) {
             $ionicLoading.hide();
             var alertPopup = $ionicPopup.alert({

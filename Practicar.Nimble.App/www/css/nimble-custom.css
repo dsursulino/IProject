@@ -1,4 +1,27 @@
-﻿.nimble .list .item {
+﻿.bar-nimble-blue .bar {
+    border-color: #4b72b2 !important;
+    background-color: #4b72b2 !important;
+    color: #ffffff !important;
+}
+
+.bar-nimble-blue .button-clear.button-clear {
+    color: #ffffff !important;
+    box-shadow: none;
+}
+
+.tab-nimble .tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+    color: #4b72b2 !important;
+}
+
+.tab-nimble .tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated {
+
+    margin-top:1px;
+    border-width:0px 0px 3px 0px !important;
+    border-style:solid;
+    border-color: #4b72b2;
+}
+
+.nimble .list .item {
     margin-bottom: 8px !important;
     padding: 2px 5px 2px 5px !important;
 }
@@ -236,10 +259,6 @@
     transition: transform 0.3s ease;
 }
 
-.teste {
-    color: #01cf1c;
-    background-color: #e5e9ec;
-}
 
 
 /********************************Progress     */
@@ -264,7 +283,7 @@
         background-color: #f3f3f3;
         border: 1px;
         /*width: 80%;*/
-        height: 13px;
+        height: 16px;
         border-top-right-radius: 30px;
         border-bottom-right-radius: 30px;
         margin: 0px !important;
@@ -272,7 +291,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        color:limegreen!important
+        color: limegreen !important;
     }
 
 
@@ -311,13 +330,13 @@
         /*line-height: 20px;*/
         /*margin-left: 5px;*/
         /*font-size: .8em;*/
-        color: beige;
-        font-weight:bold;
+        color: #2f4975;
+        font-weight: bold;
         height: 18px;
         float: right;
         position: absolute;
         left: 0;
         top: 0;
-        text-align:center;
-        width:100%;
+        text-align: center;
+        width: 100%;
     }
