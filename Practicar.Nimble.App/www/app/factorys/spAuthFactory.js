@@ -55,7 +55,9 @@ angular.module('nimble.factory.spAuthFactory', [])
             $.ajax({
 
                 method: 'GET',
-                url: _oAuth.ProjectURL + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
+              //  url: _oAuth.ProjectURL + "/_api/SP.UserProfiles.PeopleManager/GetMyProperties",
+                url: _oAuth.ProjectURL + "/_api/Web/CurrentUser",
+        
                 async: false,
                 data: _oAuth.SecurityToken,
                 headers: {
