@@ -5,7 +5,13 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'nimble.utils', 'starter.controllers', 'starter.services', 'starter.spAuthFactory'])
+angular.module('starter', ['ionic', 'nimble.factory.utils',
+                                    'nimble.controllers.Menu',
+                                    'nimble.controllers.Login',
+                                    'nimble.controllers.tabProjects',
+                                    'nimble.controllers.tabAssignments',
+                                    'nimble.controllers.tabWorkflowTasks',
+                                    'starter.controllers', 'starter.services', 'starter.spAuthFactory'])
 
 .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
@@ -30,31 +36,41 @@ angular.module('starter', ['ionic', 'nimble.utils', 'starter.controllers', 'star
     // Set up the various states which the app can be in.
     // Each state's controller can be found in controllers.js
     $stateProvider
+     .state('about', {
+         url: "/about",
+         templateUrl: "about.html"
+
+     })
     .state('login', {
-        url: '/login',      
-        templateUrl: 'app/auth/login.html',
+        url: '/login',
+        templateUrl: 'app/views/auth/login.html',
         controller: 'LoginCtrl'
     })
-    .state('about', {
-        url: "/about",
-        templateUrl: "about.html",
-        controller: 'DashCtrl'
-    })
+
+
     // setup an abstract state for the tabs directive
-    .state('tab', {
-        url: '/tab',
+    .state('startTabs', {
+        url: '/startTabs',
         abstract: true,
-        templateUrl: 'templates/tabs.html'
+        templateUrl: 'app/views/start-tabs/tab-master.html'
     })
 
-    // Each tab has its own nav history stack:
 
+    //.state('startTabs.projects', {
+    //    url: '/projects',
+    //    views: {
+    //        'tab-projects': {
+    //            templateUrl: 'app/views/start-tabs/tab-projects.html',
+    //            controller: 'tabProjectsCtrl'
+    //        }
+    //    }
+    //})
     .state('tab.dash', {
         url: '/dash',
         views: {
             'tab-dash': {
                 templateUrl: 'templates/tab-dash.html',
-                controller: 'DashCtrl'
+                controller: 'tabProjectsCtrl'
             }
         }
     })

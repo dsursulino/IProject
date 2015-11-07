@@ -14,17 +14,7 @@ angular.module('nimble.controllers.tabProjects', [])
 
     $scope.Projects = {};
 
-    $scope.RenderPiePercentComplete = function () {
-
-        $("[name='pie-percentComplete']").easyPieChart({
-            lineWidth: 9,
-            barColor: '#7dc6ec',
-            trackColor: '#e5e9ec',
-            scaleColor: false,
-            size: 70
-        });
-    };
-
+  
     $scope.layoutDone = function () {
 
         $timeout(function () {

@@ -1,4 +1,6 @@
-﻿.bar-nimble-blue .bar {
+﻿@import url(nimble-dashboard.css);
+
+.bar-nimble-blue .bar {
     border-color: #4b72b2 !important;
     background-color: #4b72b2 !important;
     color: #ffffff !important;

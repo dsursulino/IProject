@@ -53,7 +53,7 @@ angular.module('nimble.controllers.Login', [])
                 $("#imgProfileUser").attr("src", spAuthenticate.oAuth().User.Profile.Photo);
                 //angular.element(document.getElementById('menuDefaultRight')).scope().$apply();
                 angular.element(document.getElementById('menuDefaultRight')).scope().Load(); //BUG
-                $state.go('startTabs.projects');
+                $state.go('dashBasic');
                 $ionicLoading.hide();
 
             }).error(function (data) {

@@ -4,10 +4,33 @@
         <button class="button button-icon button-clear ion-android-more-vertical" ng-click="openRightMenu()"></button>
     </ion-nav-buttons>
     <ion-content>
-        <ion-list>
-            <ion-toggle ng-model="settings.enableFriends">
-                #NimbleNaVeia
-            </ion-toggle>
-        </ion-list>
+        <div class="container-fluid">
+            <timeline>
+                <timeline-event ng-repeat="event in events">
+                    <!-- uses angular-scroll-animate to give it some pop -->
+                    <timeline-badge class="{{event.badgeClass}} hidden"
+                                    when-visible="animateElementIn" when-not-visible="animateElementOut">
+                        <i class="ion-android-checkmark-circle"></i>
+                    </timeline-badge>
+                    <!-- uses angular-scroll-animate to give it some pop -->
+                    <timeline-panel class="{{event.badgeClass}} hidden"
+                                    when-visible="animateElementIn" when-not-visible="animateElementOut">
+                        <timeline-heading>
+                            <h4 style="margin-top:0px!important">{{event.title}}</h4>
+
+                            <small ng-if="event.startDate" class="text-muted"><i class="ion-android-calendar"></i>&nbsp;&nbsp;Criado em: {{event.startDate | date:'dd/MM/yyyy hh:mm'}}</small><br />
+                            <small ng-if="event.finishDate" class="text-muted"><i class="ion-android-calendar"></i>&nbsp;&nbsp;Término em: {{event.finishDate | date:'dd/MM/yyyy hh:mm'}}</small>
+
+                            <p ng-if="event.content" ng-bind-html="event.content">
+                            </p>
+                        </timeline-heading>
+                        <p ng-bind-html="event.contentHtml"></p>
+                        <timeline-footer ng-if="event.footerContentHtml">
+                            <span ng-bind-html="event.footerContentHtml"></span>
+                        </timeline-footer>
+                    </timeline-panel>
+                </timeline-event>
+            </timeline>
+        </div>
     </ion-content>
 </ion-view>

@@ -13,8 +13,8 @@
     <link href="lib/angular-timeline/angular-timeline-animations.css" rel="stylesheet" />
     <link href="css/nimble-listItem.css" rel="stylesheet" />
     <script src="scripts/winstore-jscompat.js"></script>
-    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
-    <script src="lib/ionic/js/ionic.min.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/ionic.js"></script>
     <script src="lib/ionic/js/ionic-angular.min.js"></script>
     <script src="lib/ionic/js/angular/angular.min.js"></script>
     <script src="lib/ionic/js/angular/angular-resource.min.js"></script>
@@ -27,12 +27,14 @@
     <script src="lib/morris-charts/morris.min.js"></script>
     <script src="lib/jquery-easy-pie-chart/js/jquery.easypiechart.min.js"></script>
     <script src="lib/angular-timeline/angular-timeline.js"></script>
+   
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
     <!-- your app's js -->
 
     <script src="app/app.js"></script>
-   
+    <script src="lib/highcharts/highcharts.js"></script>
+    <script src="lib/highcharts/adapters/standalone-framework.js"></script>
     <script src="app/nimble-directives.js"></script>
     <script src="app/nimble-filters.js"></script>
     <script src="app/factorys/utilFactory.js"></script>
@@ -45,6 +47,9 @@
     <script src="app/controllers/tab-projectsCtrl.js"></script>
     <script src="app/controllers/tab-assignmentsCtrl.js"></script>
     <script src="app/controllers/tab-workflowTasksCtrl.js"></script>
+    <script src="app/controllers/dash-basic.js"></script>
+
+
 </head>
 <body ng-app="starter">
     <ion-view>
@@ -73,7 +78,6 @@
                             <div class="greeting">Bem vindo(a)</div>
                             <div class="username">
                                 {{User.Title}}
-                                <!--Denis <span class="semi-bold">Renam</span>-->
 
                             </div>
                             <div class="status">
@@ -88,7 +92,7 @@
 
 
                     <ion-list class="menu-item">
-                        <ion-item item-type="item-icon-left" nav-clear href="#/startTabs/projects" menu-close><i class="icon ion-android-home"></i>Início</ion-item>
+                        <ion-item item-type="item-icon-left" nav-clear href="#/dashBasic" menu-close><i class="icon ion-android-home"></i>Dashboard</ion-item>
                         <ion-item item-type="item-icon-left" nav-clear href="#/startTabs/projects" menu-close><i class="icon ion-ios-pulse-strong"></i>Meus Projetos</ion-item>
                         <ion-item item-type="item-icon-left" nav-clear href="#/startTabs/assignments" menu-close><i class="icon ion-clipboard"></i>Minhas Tarefas</ion-item>
                         <ion-item item-type="item-icon-left" nav-clear href="#/startTabs/workflowTasks" menu-close><i class="icon ion-android-checkmark-circle"></i>Minhas Aprovações</ion-item>
@@ -109,5 +113,7 @@
             </ion-side-menu>
         </ion-side-menus>
     </ion-view>
+
+
 </body>
 </html>

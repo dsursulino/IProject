@@ -21,10 +21,12 @@ angular.module('starter', ['ionic',
                                     'nimble.controllers.Login',
                                     'nimble.controllers.tabProjects',
                                     'nimble.controllers.tabAssignments',
-                                    'nimble.controllers.tabWorkflowTasks'
+                                    'nimble.controllers.tabWorkflowTasks',
+                                    'nimble.controllers.dashboardBasic'
 ])
 
 .run(function ($ionicPlatform) {
+
     $ionicPlatform.ready(function () {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -37,6 +39,7 @@ angular.module('starter', ['ionic',
             // org.apache.cordova.statusbar required
             StatusBar.styleLightContent();
         }
+
     });
 })
 
@@ -58,7 +61,11 @@ angular.module('starter', ['ionic',
         templateUrl: 'app/views/auth/login.html',
         controller: 'LoginCtrl'
     })
-
+    .state('dashBasic', {
+        url: '/dashBasic',
+        templateUrl: 'app/views/dashboards/basic.html',
+        controller: 'dashboardBasicCtrl'
+    })
 
      // setup an abstract state for the tabs directive
     .state('startTabs', {

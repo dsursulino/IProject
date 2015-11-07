@@ -1,9 +1,9 @@
 ﻿/// <reference path="spAuthService.js" />
 angular.module('nimble.controllers.tabWorkflowTasks', [])
 
-.controller('workflowTasksCtrl', function ($rootScope, $document, $timeout, $scope, $ionicSideMenuDelegate, workflowTasksService) {
+.controller('workflowTasksCtrl', function ($rootScope, $document, $timeout, $scope, $ionicSideMenuDelegate, $ionicPopup, workflowTasksService) {
     $scope.events = [];
-    
+
     $scope.openRightMenu = function () {
         $ionicSideMenuDelegate.toggleRight();
     };
@@ -19,9 +19,9 @@ angular.module('nimble.controllers.tabWorkflowTasks', [])
                         badgeIconClass: '',
                         title: task.Title,
                         startDate: new Date(task.StartDate),
-                        finishDate:   (task.DueDate == null? null : new Date(task.DueDate)),
+                        finishDate: (task.DueDate == null ? null : new Date(task.DueDate)),
                         content: task.Body,
-                       
+
                     });
                 } catch (e) {
                     window.alert(e);
