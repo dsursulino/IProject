@@ -1,7 +1,7 @@
 ﻿/// <reference path="spAuthService.js" />
 angular.module('nimble.controllers.dashboardBasic', [])
 
-.controller('dashboardBasicCtrl', function ($rootScope, $state, $timeout, $scope, $ionicSideMenuDelegate, $ionicPopup, projectService) {
+.controller('dashboardBasicCtrl', function ($rootScope, $state, $timeout, $scope, $ionicSideMenuDelegate, $ionicPopup, $filter, projectService, assignmentService) {
 
 
     $scope.openRightMenu = function () {
@@ -77,15 +77,15 @@ angular.module('nimble.controllers.dashboardBasic', [])
             },
             series: [{
                 name: 'Atrasado',
-                color: '#DF5353',
+                color: '#FFB68E',
                 data: [dataMyprojects.countDelayed]
             }, {
                 name: 'Em Risco',
-                color: '#DDDF0D',
+                color: '#EDED87',
                 data: [dataMyprojects.countInRisk]
             }, {
                 name: 'No Prazo',
-                color: '#55BF3B',
+                color: '#BFE387',
                 data: [dataMyprojects.countOK]
             }]
         });
@@ -95,21 +95,23 @@ angular.module('nimble.controllers.dashboardBasic', [])
             chart: {
                 type: 'column',
                 backgroundColor: 'transparent',
-                shadow: false
+                shadow: false,
+                marginTop: 0
             },
             exporting: { enabled: false },
             title: {
-                text: ''
+                text: '',
+                margin: 0
             },
             credits: {
                 enabled: false
             },
             xAxis: {
-                categories: ['Outubro', 'Novembro', 'Dezembro']
+                categories: dataMyTasks.categories  //['Outubro', 'Novembro', 'Dezembro']
             },
             yAxis: {
                 min: 0,
-                max:11,
+                max: dataMyTasks.count,
                 visible: false,
                 title: {
                     text: 'Minhas Tarefas'
@@ -149,22 +151,28 @@ angular.module('nimble.controllers.dashboardBasic', [])
                 }
             },
             series: [{
-                name: 'Atrasao',
-                color: '#DF5353',
-                data: [5, 3, 4]
+                name: 'Atrasada',
+                color: '#FFB68E',
+                data: [dataMyTasks.lastMonth.countDelayed, dataMyTasks.actualMonth.countDelayed, dataMyTasks.futureMonth.countDelayed]
             }, {
-                name: 'Em Risco',
-                color: '#DDDF0D',
-                data: [2, 2, 3]
+                name: 'Não Iniciada',
+                color: '#EDED87',
+                data: [dataMyTasks.lastMonth.countFuture, dataMyTasks.actualMonth.countFuture, dataMyTasks.futureMonth.countFuture]
             }, {
-                name: 'No Prazo',
-                color: '#55BF3B',
-                data: [3, 4, 4]
+                name: 'Concluídas',
+                color: '#BFE387',
+                data: [dataMyTasks.lastMonth.countOK, dataMyTasks.actualMonth.countOK, dataMyTasks.futureMonth.countOK]
+    
+            }, {
+                name: 'Iniciada',
+                color: '#00447C',
+                data: [dataMyTasks.lastMonth.countStarted, dataMyTasks.actualMonth.countStarted, dataMyTasks.futureMonth.countStarted]
+
             }]
         });
     };
 
-    $scope.FillMyTasks(null);
+
 
     projectService.getMyProjects().success(function (data) {
         $scope.Projects = data;
@@ -196,5 +204,102 @@ angular.module('nimble.controllers.dashboardBasic', [])
         $scope.$broadcast('scroll.refreshComplete');
     });
 
+    assignmentService.getAssignedsLasted().success(function (data) {
 
+
+
+        var dataMyTasks = {
+            "count": data.length,
+            "categories": [],
+            "lastMonth": {
+                "countDelayed": 0,
+                "countFuture": 0,
+                "countOK": 0,
+                "countStarted": 0
+            },
+            "actualMonth": {
+                "countDelayed": 0,
+                "countFuture": 0,
+                "countOK": 0,
+                "countStarted": 0
+            },
+            "futureMonth": {
+                "countDelayed": 0,
+                "countFuture": 0,
+                "countOK": 0,
+                "countStarted": 0
+            }
+        };
+        var now = new Date();
+
+        dataMyTasks.categories.push(now.getMonth() - 1);
+        dataMyTasks.categories.push(now.getMonth());
+        dataMyTasks.categories.push(now.getMonth() + 1);
+
+        angular.forEach(data, function (value) {
+            value.AssignmentStartDate = new Date(parseInt(value.AssignmentStartDate.substr(6)));
+            value.AssignmentFinishDate = new Date(parseInt(value.AssignmentFinishDate.substr(6)));
+            //Last
+            if ((value.AssignmentStartDate.getMonth() <= now.getMonth()-1 && value.AssignmentFinishDate.getMonth() >= now.getMonth()-1) || value.AssignmentStartDate.getMonth() == now.getMonth()-1 || value.AssignmentFinishDate.getMonth() == now.getMonth()-1) {
+
+                if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
+                    dataMyTasks.lastMonth.countDelayed++;
+                }
+                else if (value.AssignmentPercentWorkCompleted >= 100) {
+                    dataMyTasks.lastMonth.countOK++;
+                }
+                else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
+                    dataMyTasks.lastMonth.countFuture++;
+                }
+                else
+                {
+                    dataMyTasks.lastMonth.countStarted++;
+                }
+            }
+            //Actual
+            if ((value.AssignmentStartDate.getMonth() <= now.getMonth() && value.AssignmentFinishDate.getMonth() >= now.getMonth()) || value.AssignmentStartDate.getMonth() == now.getMonth() || value.AssignmentFinishDate.getMonth() == now.getMonth()) {
+
+                if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
+                    dataMyTasks.actualMonth.countDelayed++;
+                }
+                else if (value.AssignmentPercentWorkCompleted >= 100) {
+                    dataMyTasks.actualMonth.countOK++;
+                }
+                else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
+                    dataMyTasks.actualMonth.countFuture++;
+                }
+                else {
+                    dataMyTasks.actualMonth.countStarted++;
+                }
+            }
+            //future
+            if ((value.AssignmentStartDate.getMonth() >= now.getMonth()+1 || value.AssignmentFinishDate.getMonth() >= now.getMonth()+1) ) {
+
+                if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
+                    dataMyTasks.futureMonth.countDelayed++;
+                }
+                else if (value.AssignmentPercentWorkCompleted >=100) {
+                    dataMyTasks.futureMonth.countOK++;
+                }
+                else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
+                    dataMyTasks.futureMonth.countFuture++;
+                }
+                else {
+                    dataMyTasks.actualMonth.countStarted++;
+                }
+            }
+        });
+        $scope.FillMyTasks(dataMyTasks);
+        $scope.dataMyTasks = dataMyTasks;
+        $scope.$broadcast('scroll.refreshComplete');
+    }).error(function (data) {
+        var alertPopup = $ionicPopup.alert({
+            title: 'Processamento inválido',
+            template: data
+        });
+        $scope.$broadcast('scroll.refreshComplete');
+    });
+
+
+   
 });

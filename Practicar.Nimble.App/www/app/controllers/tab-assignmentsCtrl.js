@@ -1,7 +1,7 @@
 ﻿/// <reference path="spAuthService.js" />
 angular.module('nimble.controllers.tabAssignments', [])
 
-.controller('tabAssignmentsCtrl', function ($rootScope, $document, $timeout, $scope, $ionicSideMenuDelegate, assignmentService) {
+.controller('tabAssignmentsCtrl', function ($rootScope,  $state, $document, $timeout, $scope, $ionicSideMenuDelegate, $ionicPopup ,assignmentService) {
 
     $scope.Assignments = {};
 
@@ -38,7 +38,11 @@ angular.module('nimble.controllers.tabAssignments', [])
         }, 0);
     };
 
+    $scope.Edit = function (id) {
 
+        $state.go("startTabs.assignments-edit", { "id": id });
+
+    };
    
 
     $scope.Assignments = assignmentService.getOwner().success(function (data) {

@@ -1,8 +1,10 @@
 ﻿<ion-view view-title="Minhas Tarefas">
+
+
     <ion-nav-buttons side="right">
         <button class="button button-icon button-clear ion-android-more-vertical" ng-click="openRightMenu()"></button>
     </ion-nav-buttons>
-    <ion-content>
+    <ion-content >
 
 
         <div class="container">
@@ -11,27 +13,28 @@
                     <ul class="event-list">
 
 
-                        <li ng-repeat="assignment in Assignments">
-                            <!--<time datetime="2014-07-20 0000">-->
-                            <time datetime="">
-                                 <!--AssignmentFinishDate-->
 
+
+
+                        <li ng-repeat="assignment in Assignments" ng-click="edit('{{assignment.AssignmentId}}')"  type="item-text-wrap">
+
+                            <time datetime=""  ng-click="Edit('{{assignment.AssignmentId}}')">
                                 <span class="day">{{assignment.AssignmentStartDate | dateFormat:'dd'}}</span>
                                 <span class="month">{{assignment.AssignmentStartDate | dateFormat:'MMM'}}</span>
                                 <span class="year">{{assignment.AssignmentStartDate | dateFormat:'yy'}}</span>
                                 <span class="time"></span>
                             </time>
                             <div class="info" style="padding-right:0px!important">
-                                <h2 class="title">{{assignment.TaskName}}</h2>
+                                <h2 class="title"  ng-click="Edit('{{assignment.AssignmentId}}')" >{{assignment.TaskName}}</h2>
                                 <p class="desc">
                                     {{assignment.ProjectName}}
                                 </p>
                                 <ul>
-                                    <li style="width:20%;"><span class="icon ion-person-stalker"></span> <span ng-attr-id="{{'span'+ assignment.TaskId}}" >-</span></li>
+                                    <li style="width:20%;"><span class="icon ion-person-stalker"></span> <span ng-attr-id="{{'span'+ assignment.TaskId}}">-</span></li>
                                     <li style="width:80%;"><span class="icon ion-clock"></span> {{assignment.AssignmentFinishDate|timeago}}</li>
                                 </ul>
                                 <div class="html5-progress-bar">
-                                    <progress ng-attr-id="{{assignment.AssignmentId}}"   repeat-done="LoadPercentComplete()" name="progressAssignmentPercentWorkCompleted" max="100" data-value="{{assignment.AssignmentPercentWorkCompleted}}"   data-taskid="{{assignment.TaskId}}" class="progress-assignments"> </progress>
+                                    <progress ng-attr-id="{{assignment.AssignmentId}}" repeat-done="LoadPercentComplete()" name="progressAssignmentPercentWorkCompleted" max="100" data-value="{{assignment.AssignmentPercentWorkCompleted}}" data-taskid="{{assignment.TaskId}}" class="progress-assignments"> </progress>
                                     <div ng-attr-id="{{'label'+assignment.AssignmentId}}" class="progress-value">{{assignment.AssignmentPercentWorkCompleted}}%</div>
                                 </div>
 
@@ -45,5 +48,9 @@
                 </div>
             </div>
         </div>
+
+
+
+
     </ion-content>
 </ion-view>

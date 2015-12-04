@@ -5,9 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic',
+angular.module('starter', ['ionic', 'ngMessages',
                                     'ngSanitize',
-                                    'ui.router',
+                                    'ui.router',                                    
                                     'angular-timeline',
                                     'angular-scroll-animate',
                                     'nimble.factory.utils',
@@ -22,6 +22,7 @@ angular.module('starter', ['ionic',
                                     'nimble.controllers.tabProjects',
                                     'nimble.controllers.tabAssignments',
                                     'nimble.controllers.tabWorkflowTasks',
+                                    'nimble.controllers.assignment',
                                     'nimble.controllers.dashboardBasic'
 ])
 
@@ -103,17 +104,17 @@ angular.module('starter', ['ionic',
                 controller: 'workflowTasksCtrl'
             }
         }
-    });
+    })
 
-    //.state('tab.chat-detail', {
-    //    url: '/chats/:chatId',
-    //    views: {
-    //        'tab-chats': {
-    //            templateUrl: 'templates/chat-detail.html',
-    //            controller: 'ChatDetailCtrl'
-    //        }
-    //    }
-    //});
+    .state('startTabs.assignments-edit', {
+        url: '/assignments/:id',
+        views: {
+            'tab-assignments': {
+                templateUrl: 'app/views/assignments/edit.html',
+                controller: 'assignmentCtrl'
+            }
+        }
+    });
 
 
 

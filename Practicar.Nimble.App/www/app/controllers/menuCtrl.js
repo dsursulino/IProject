@@ -11,7 +11,7 @@ angular.module('nimble.controllers.Menu', [])
         $scope.User = spAuthenticate.oAuth().User.Profile;
     };
 
-    $scope.User = spAuthenticate.oAuth().User.Profile;
+   // $scope.User = spAuthenticate.oAuth().User.Profile;
 
 
 
