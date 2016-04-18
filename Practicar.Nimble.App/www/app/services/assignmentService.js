@@ -315,29 +315,29 @@ angular.module('nimble.service.assignment', [])
 
 
 
-        $.support.cors = true; // enable cross-domain query
-        $.ajax({
-            type: 'POST',
-            data: oAuth.SecurityToken,
-            crossDomain: true, // had no effect, see support.cors above
-            contentType: 'text/xml; charset="utf-8"',
-            url: oAuth.ProjectURL + '/_vti_bin/sites.asmx',
-            headers: {
-                'SOAPAction': 'http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigestInformation',
-                'X-RequestForceAuthentication': 'true'
-            },
-            dataType: 'xml',
-            success: function (data, textStatus, result) {
-                digest = $(result.responseXML).find("DigestValue").text();
-                //     sendRESTReq();
-            },
-            error: function (result, textStatus, errorThrown) {
-                var response = JSON.parse(result.responseText);
-                if ((response.error != undefined) && (response.error.message != undefined)) {
-                    alert(response.error.message.value);
-                }
-            }
-        });
+        //$.support.cors = true; // enable cross-domain query
+        //$.ajax({
+        //    type: 'POST',
+        //    data: oAuth.SecurityToken,
+        //    crossDomain: true, // had no effect, see support.cors above
+        //    contentType: 'text/xml; charset="utf-8"',
+        //    url: oAuth.ProjectURL + '/_vti_bin/sites.asmx',
+        //    headers: {
+        //        'SOAPAction': 'http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigestInformation',
+        //        'X-RequestForceAuthentication': 'true'
+        //    },
+        //    dataType: 'xml',
+        //    success: function (data, textStatus, result) {
+        //        digest = $(result.responseXML).find("DigestValue").text();
+        //        //     sendRESTReq();
+        //    },
+        //    error: function (result, textStatus, errorThrown) {
+        //        var response = JSON.parse(result.responseText);
+        //        if ((response.error != undefined) && (response.error.message != undefined)) {
+        //            alert(response.error.message.value);
+        //        }
+        //    }
+        //});
 
 
 

@@ -89,8 +89,10 @@ angular.module('nimble.controllers.dashboardBasic', [])
                 data: [dataMyprojects.countOK]
             }]
         });
+
     };
-    $scope.FillMyTasks = function (dataMyTasks) {
+
+    $scope.FillMyTasks2 = function (dataMyTasks) {
         $('#divMyTasks').highcharts({
             chart: {
                 type: 'column',
@@ -107,199 +109,192 @@ angular.module('nimble.controllers.dashboardBasic', [])
                 enabled: false
             },
             xAxis: {
-                categories: dataMyTasks.categories  //['Outubro', 'Novembro', 'Dezembro']
+                categories: dataMyTasks.categories,  //['Outubro', 'Novembro', 'Dezembro']
+                crosshair: true,
+                title: {
+                    text: ''
+                }
             },
             yAxis: {
                 min: 0,
-                max: dataMyTasks.count,
-                visible: false,
                 title: {
-                    text: 'Minhas Tarefas'
+                    text: ''
                 },
-                stackLabels: {
-                    enabled: true,
-                    style: {
-                        fontWeight: 'bold',
-                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-                    }
-                }
-            },
-            legend: {
-                reversed: true,
-                margin: 0,
-                shadow: false,
-                verticalAlign: 'bottom',
-                floating: false
             },
             tooltip: {
-                formatter: function () {
-                    return '<b>' + this.x + '</b><br/>' +
-                        this.series.name + ': ' + this.y + '<br/>' +
-                        'Total: ' + this.point.stackTotal;
-                }
+                headerFormat: '<span style="font-size:12pt">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y}</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
             },
             plotOptions: {
                 column: {
-                    stacking: 'normal',
-                    dataLabels: {
-                        enabled: true,
-                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                        style: {
-                            textShadow: '0 0 3px black'
-                        }
-                    }
+                    pointPadding: 0.2,
+                    borderWidth: 0
                 }
             },
             series: [{
                 name: 'Atrasada',
-                color: '#FFB68E',
+                color: '#ed7d31', //orange
                 data: [dataMyTasks.lastMonth.countDelayed, dataMyTasks.actualMonth.countDelayed, dataMyTasks.futureMonth.countDelayed]
             }, {
                 name: 'Não Iniciada',
-                color: '#EDED87',
+                color: '#00447C', //blue
                 data: [dataMyTasks.lastMonth.countFuture, dataMyTasks.actualMonth.countFuture, dataMyTasks.futureMonth.countFuture]
             }, {
                 name: 'Concluídas',
-                color: '#BFE387',
+                color: '#00b050', //greem
                 data: [dataMyTasks.lastMonth.countOK, dataMyTasks.actualMonth.countOK, dataMyTasks.futureMonth.countOK]
-    
+
             }, {
-                name: 'Iniciada',
-                color: '#00447C',
+                name: 'Em andamento',
+                color: '#ffc000',//yellow
                 data: [dataMyTasks.lastMonth.countStarted, dataMyTasks.actualMonth.countStarted, dataMyTasks.futureMonth.countStarted]
 
             }]
         });
+
+    }
+
+    
+
+    $scope.RefreshData = function () {
+
+        projectService.getMyProjects().success(function (data) {
+            $scope.Projects = data;
+            var dataMyprojects = { "count": data.length, "countDelayed": 0, "countInRisk": 0, "countOK": 0 };
+
+            angular.forEach(data, function (value) {
+                var spi = (parseFloat(value.ProjectSPI) * 100);
+
+
+                if (spi < 80) {
+                    dataMyprojects.countDelayed++;
+                }
+                else if (spi >= 80 && spi < 90) {
+                    dataMyprojects.countInRisk++;
+                }
+                else if (spi >= 90) {
+                    dataMyprojects.countOK++;
+                }
+
+            });
+            $scope.FillMyProjects(dataMyprojects)
+            $scope.dataMyprojects = dataMyprojects;
+          //  $scope.$broadcast('scroll.refreshComplete');
+        }).error(function (data) {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Processamento inválido',
+                template: data
+            });
+            $scope.$broadcast('scroll.refreshComplete');
+        });
+
+        assignmentService.getAssignedsLasted().success(function (data) {
+
+
+
+            var dataMyTasks = {
+                "count": data.length,
+                "countStarted": 0,
+                "categories": [],
+                "lastMonth": {
+                    "countDelayed": 0,
+                    "countFuture": 0,
+                    "countOK": 0,
+                    "countStarted": 0
+                },
+                "actualMonth": {
+                    "countDelayed": 0,
+                    "countFuture": 0,
+                    "countOK": 0,
+                    "countStarted": 0
+                },
+                "futureMonth": {
+                    "countDelayed": 0,
+                    "countFuture": 0,
+                    "countOK": 0,
+                    "countStarted": 0
+                }
+            };
+            var now = new Date();
+            now.setMonth(now.getMonth() - 1);
+            dataMyTasks.categories.push(Highcharts.dateFormat('%b/%Y', now));
+            now.setMonth(now.getMonth() + 1);
+            dataMyTasks.categories.push(Highcharts.dateFormat('%b/%Y', now));
+            now.setMonth(now.getMonth() + 1);
+            dataMyTasks.categories.push(Highcharts.dateFormat('%b/%Y', now));
+
+            now = new Date();
+
+            angular.forEach(data, function (value) {
+                value.AssignmentStartDate = new Date(parseInt(value.AssignmentStartDate.substr(6)));
+                value.AssignmentFinishDate = new Date(parseInt(value.AssignmentFinishDate.substr(6)));
+                //Last
+                if ((value.AssignmentStartDate.getMonth() <= now.getMonth() - 1 && value.AssignmentFinishDate.getMonth() >= now.getMonth() - 1) || value.AssignmentStartDate.getMonth() == now.getMonth() - 1 || value.AssignmentFinishDate.getMonth() == now.getMonth() - 1) {
+
+                    if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
+                        dataMyTasks.lastMonth.countDelayed++;
+                    }
+                    else if (value.AssignmentPercentWorkCompleted >= 100) {
+                        dataMyTasks.lastMonth.countOK++;
+                    }
+                    else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
+                        dataMyTasks.lastMonth.countFuture++;
+                    }
+                    else {
+                        dataMyTasks.lastMonth.countStarted++;
+                        dataMyTasks.countStarted++;
+                    }
+                }
+                //Actual
+                if ((value.AssignmentStartDate.getMonth() <= now.getMonth() && value.AssignmentFinishDate.getMonth() >= now.getMonth()) || value.AssignmentStartDate.getMonth() == now.getMonth() || value.AssignmentFinishDate.getMonth() == now.getMonth()) {
+
+                    if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
+                        dataMyTasks.actualMonth.countDelayed++;
+                    }
+                    else if (value.AssignmentPercentWorkCompleted >= 100) {
+                        dataMyTasks.actualMonth.countOK++;
+                    }
+                    else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
+                        dataMyTasks.actualMonth.countFuture++;
+                    }
+                    else {
+                        dataMyTasks.actualMonth.countStarted++;
+                        dataMyTasks.countStarted++;
+                    }
+                }
+                //future
+                if ((value.AssignmentStartDate.getMonth() >= now.getMonth() + 1 || value.AssignmentFinishDate.getMonth() >= now.getMonth() + 1)) {
+
+                    if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
+                        dataMyTasks.futureMonth.countDelayed++;
+                    }
+                    else if (value.AssignmentPercentWorkCompleted >= 100) {
+                        dataMyTasks.futureMonth.countOK++;
+                    }
+                    else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
+                        dataMyTasks.futureMonth.countFuture++;
+                    }
+                    else {
+                        dataMyTasks.actualMonth.countStarted++;
+                        dataMyTasks.countStarted++;
+                    }
+                }
+            });
+            $scope.FillMyTasks2(dataMyTasks);
+            $scope.dataMyTasks = dataMyTasks;
+            $scope.$broadcast('scroll.refreshComplete');
+        }).error(function (data) {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Processamento inválido',
+                template: data
+            });
+            $scope.$broadcast('scroll.refreshComplete');
+        });
+
     };
 
-
-
-    projectService.getMyProjects().success(function (data) {
-        $scope.Projects = data;
-        var dataMyprojects = { "count": data.length, "countDelayed": 0, "countInRisk": 0, "countOK": 0 };
-
-        angular.forEach(data, function (value) {
-            var spi = (parseFloat(value.ProjectSPI) * 100);
-
-
-            if (spi < 80) {
-                dataMyprojects.countDelayed++;
-            }
-            else if (spi >= 80 && spi < 90) {
-                dataMyprojects.countInRisk++;
-            }
-            else if (spi >= 90) {
-                dataMyprojects.countOK++;
-            }
-
-        });
-        $scope.FillMyProjects(dataMyprojects)
-        $scope.dataMyprojects = dataMyprojects;
-        $scope.$broadcast('scroll.refreshComplete');
-    }).error(function (data) {
-        var alertPopup = $ionicPopup.alert({
-            title: 'Processamento inválido',
-            template: data
-        });
-        $scope.$broadcast('scroll.refreshComplete');
-    });
-
-    assignmentService.getAssignedsLasted().success(function (data) {
-
-
-
-        var dataMyTasks = {
-            "count": data.length,
-            "categories": [],
-            "lastMonth": {
-                "countDelayed": 0,
-                "countFuture": 0,
-                "countOK": 0,
-                "countStarted": 0
-            },
-            "actualMonth": {
-                "countDelayed": 0,
-                "countFuture": 0,
-                "countOK": 0,
-                "countStarted": 0
-            },
-            "futureMonth": {
-                "countDelayed": 0,
-                "countFuture": 0,
-                "countOK": 0,
-                "countStarted": 0
-            }
-        };
-        var now = new Date();
-
-        dataMyTasks.categories.push(now.getMonth() - 1);
-        dataMyTasks.categories.push(now.getMonth());
-        dataMyTasks.categories.push(now.getMonth() + 1);
-
-        angular.forEach(data, function (value) {
-            value.AssignmentStartDate = new Date(parseInt(value.AssignmentStartDate.substr(6)));
-            value.AssignmentFinishDate = new Date(parseInt(value.AssignmentFinishDate.substr(6)));
-            //Last
-            if ((value.AssignmentStartDate.getMonth() <= now.getMonth()-1 && value.AssignmentFinishDate.getMonth() >= now.getMonth()-1) || value.AssignmentStartDate.getMonth() == now.getMonth()-1 || value.AssignmentFinishDate.getMonth() == now.getMonth()-1) {
-
-                if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
-                    dataMyTasks.lastMonth.countDelayed++;
-                }
-                else if (value.AssignmentPercentWorkCompleted >= 100) {
-                    dataMyTasks.lastMonth.countOK++;
-                }
-                else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
-                    dataMyTasks.lastMonth.countFuture++;
-                }
-                else
-                {
-                    dataMyTasks.lastMonth.countStarted++;
-                }
-            }
-            //Actual
-            if ((value.AssignmentStartDate.getMonth() <= now.getMonth() && value.AssignmentFinishDate.getMonth() >= now.getMonth()) || value.AssignmentStartDate.getMonth() == now.getMonth() || value.AssignmentFinishDate.getMonth() == now.getMonth()) {
-
-                if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
-                    dataMyTasks.actualMonth.countDelayed++;
-                }
-                else if (value.AssignmentPercentWorkCompleted >= 100) {
-                    dataMyTasks.actualMonth.countOK++;
-                }
-                else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
-                    dataMyTasks.actualMonth.countFuture++;
-                }
-                else {
-                    dataMyTasks.actualMonth.countStarted++;
-                }
-            }
-            //future
-            if ((value.AssignmentStartDate.getMonth() >= now.getMonth()+1 || value.AssignmentFinishDate.getMonth() >= now.getMonth()+1) ) {
-
-                if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
-                    dataMyTasks.futureMonth.countDelayed++;
-                }
-                else if (value.AssignmentPercentWorkCompleted >=100) {
-                    dataMyTasks.futureMonth.countOK++;
-                }
-                else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
-                    dataMyTasks.futureMonth.countFuture++;
-                }
-                else {
-                    dataMyTasks.actualMonth.countStarted++;
-                }
-            }
-        });
-        $scope.FillMyTasks(dataMyTasks);
-        $scope.dataMyTasks = dataMyTasks;
-        $scope.$broadcast('scroll.refreshComplete');
-    }).error(function (data) {
-        var alertPopup = $ionicPopup.alert({
-            title: 'Processamento inválido',
-            template: data
-        });
-        $scope.$broadcast('scroll.refreshComplete');
-    });
-
-
-   
 });

@@ -41,6 +41,30 @@ angular.module('starter', ['ionic', 'ngMessages',
             StatusBar.styleLightContent();
         }
 
+
+    });
+
+    Highcharts.setOptions({
+        lang: {
+            loading: 'Carregando...',
+            months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            weekdays: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+            shortMonths: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            exportButtonTitle: "Exportar",
+            printButtonTitle: "Importar",
+            rangeSelectorFrom: "Desde",
+            rangeSelectorTo: "Hasta",
+            rangeSelectorZoom: "Período",
+            downloadPNG: 'Descargar imagen PNG',
+            downloadJPEG: 'Descargar imagen JPEG',
+            downloadPDF: 'Descargar imagen PDF',
+            downloadSVG: 'Descargar imagen SVG',
+            printChart: 'Imprimir',
+            resetZoom: 'Reiniciar zoom',
+            resetZoomTitle: 'Reiniciar zoom',
+            thousandsSep: ".",
+            decimalPoint: ','
+        }
     });
 })
 
@@ -64,7 +88,7 @@ angular.module('starter', ['ionic', 'ngMessages',
     })
     .state('dashBasic', {
         url: '/dashBasic',
-        templateUrl: 'app/views/dashboards/basic.html',
+        templateUrl: 'app/views/dashboards/basic2.html',
         controller: 'dashboardBasicCtrl'
     })
 

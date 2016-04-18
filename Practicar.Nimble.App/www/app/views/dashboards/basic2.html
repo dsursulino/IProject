@@ -1,0 +1,58 @@
+﻿<ion-view view-title="Dashboard" hide-back-button="true">
+    <ion-nav-buttons side="left">
+
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-more-vertical" ng-click="openRightMenu()"></button>
+    </ion-nav-buttons>
+    <ion-content class="dash" ng-init="RefreshData()">
+        <ion-refresher on-refresh="RefreshData()">
+
+        </ion-refresher>
+        <div class="row not-padding-lateral">
+            <div class="col not-padding-lateral">
+                <div class="row not-padding-lateral">
+                    <div class="col nimble-blue">
+                        <span class="ion-ios-pulse-strong icon-title">Portfólio</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col ">
+                        <div class="row  tag-portifolio"><div class="col bc-orange">{{dataMyprojects.countDelayed}}</div><div class="col">Atrasado</div></div>
+                        <div class="row  tag-portifolio"><div class="col bc-yellow">{{dataMyprojects.countInRisk}}</div><div class="col">Em risco</div></div>
+                        <div class="row  tag-portifolio"><div class="col bc-green">{{dataMyprojects.countOK}}</div><div class="col">No Prazo</div></div>
+                    </div>
+                    <div class="col tag-portifolio col-center bc-gray">
+                        {{dataMyprojects.count}} Projetos
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row not-padding-lateral">
+            <div class="col not-padding-lateral">
+                <div class="row not-padding-lateral">
+                    <div class="col nimble-blue">
+                        <span class="ion-clipboard icon-title">Tarefas</span>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:10px;">
+                    <div class="col tag-portifolio col-center bc-gray" style="margin-left: 30%; ">
+                        {{dataMyTasks.countStarted}} Tarefas em andamento
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col ">
+                        <div id="divMyTasks" style="width: 100%; margin-top: -12px !important;  margin-bottom: -20px !important; min-height: 205px !important; min-width: 200px;">
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+      
+    </ion-content>
+</ion-view>

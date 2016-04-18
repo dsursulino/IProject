@@ -26,7 +26,7 @@ angular.module('nimble.controllers.Login', [])
             if (data.domain == 'debug') {
                 $scope.data.domain = 'https://practicarcloud.sharepoint.com/PWA',
                 $scope.data.username = 'jtorres@practicar.com.br',
-                $scope.data.password = 'e%kmrtcr66';
+                $scope.data.password = 'P@$$w0rd';
             }
             if (data.domain == 'debug2') {
                 $scope.data.domain = 'https://practicarcloud.sharepoint.com/sites/PWA',
