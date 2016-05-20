@@ -1,0 +1,353 @@
+﻿@import url(nimble-dashboard.css);
+@import url(nimble-login.css);
+
+
+.nimble-blue {
+    border-color: #4b72b2 !important;
+    background-color: #4b72b2 !important;
+    color: #ffffff !important;
+}
+
+
+.bar-nimble-blue .bar {
+    border-color: #4b72b2 !important;
+    background-color: #4b72b2 !important;
+    color: #ffffff !important;
+}
+
+.bar-nimble-blue .button-clear.button-clear {
+    color: #ffffff !important;
+    box-shadow: none;
+}
+
+.tab-nimble .tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+    color: #4b72b2 !important;
+}
+
+.tab-nimble .tabs-top.tabs-striped .tab-item.tab-item-active, .tabs-top.tabs-striped .tab-item.active, .tabs-top.tabs-striped .tab-item.activated {
+
+    margin-top:1px;
+    border-width:0px 0px 3px 0px !important;
+    border-style:solid;
+    border-color: #4b72b2;
+}
+
+.nimble .list .item {
+    margin-bottom: 8px !important;
+    padding: 2px 5px 2px 5px !important;
+}
+
+.nimble td {
+    vertical-align: top !important;
+}
+
+.nimble .list .item h2 {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 0;
+    overflow: hidden;
+    min-width: 30px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 500;
+    max-width: 95%;
+}
+
+.nimble .font-size-small {
+    font-size: 11px !important;
+    font-size-adjust: 0.58;
+}
+
+
+.nimble .pull-right {
+    float: right !important;
+    position: relative !important;
+    list-style-type: none;
+    flex: 0 1 auto;
+}
+
+.nimble .border-left-green {
+    border-left: 4px solid #0AA699 !important;
+}
+
+.nimble .border-right-green {
+    border-right: 4px solid #0AA699 !important;
+}
+
+.nimble .zero-padding {
+    padding: 0px !important;
+}
+
+.nimble .item-content {
+    padding: 0px !important;
+}
+
+.nimble .zero-height {
+    height: auto;
+    min-height: 0px !important;
+    line-height: 0px !important;
+}
+
+.easy-pie-custom {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+
+    .easy-pie-custom canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+.easy-pie-percent {
+    display: inline-block;
+    line-height: 70px;
+    z-index: 2;
+}
+
+    .easy-pie-percent :after {
+        content: '%';
+        margin-left: 0.1em;
+        font-size: .8em;
+    }
+
+.button-custom .icon:before {
+    font-size: 14px !important;
+    height: 16PX !important;
+    min-height: 16px !important;
+}
+
+
+.status-icon {
+    background: url('../images/status.png') no-repeat;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    top: 2px;
+}
+
+    .status-icon.green {
+        background-position: -1px -1px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .status-icon.red {
+        background-position: -17px -1px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .status-icon.blue {
+        background-position: -33px -1px;
+        width: 14px;
+        height: 14px;
+    }
+
+    .status-icon.yellow {
+        background-position: -48px -1px;
+        width: 15px;
+        height: 14px;
+    }
+
+    .status-icon.grey {
+        background-position: -64px -1px;
+        width: 14px;
+        height: 14px;
+    }
+
+/* Menu*/
+.menu-item .item {
+    border-left: 5px solid !important;
+    border-left-color: #4b72b2 !important;
+}
+
+    .menu-item .item .icon {
+        padding-right: 8px !important;
+    }
+
+.user-info-wrapper {
+    display: block;
+    margin: 10px 10px;
+    margin-bottom: 10px;
+}
+
+    .user-info-wrapper .profile-wrapper {
+        height: 65px;
+        width: 65px;
+        border-radius: 100px;
+        overflow: hidden;
+        display: inline-block;
+        margin-right: 5px;
+        margin-top: 2px;
+        float: left;
+    }
+
+    .user-info-wrapper .user-info {
+        color: #ffffff;
+        display: inline-block;
+    }
+
+        .user-info-wrapper .user-info .status {
+            color: #f3f3f3;
+            font-size: 13px;
+            margin-bottom: 0px;
+            margin-top: 5px;
+            font-weight: normal;
+        }
+
+        .user-info-wrapper .user-info .profile {
+            float: right;
+            display: inline;
+        }
+
+        .user-info-wrapper .user-info .btn-set {
+            margin-top: 10px;
+        }
+
+        .user-info-wrapper .user-info .username {
+            font-size: 17px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: bold;
+        }
+
+        .user-info-wrapper .user-info .greeting {
+            font-size: 17px;
+            font-weight: 600;
+            position: relative;
+            top: 1.9px;
+        }
+
+        .user-info-wrapper .user-info a {
+            color: #ffffff;
+        }
+
+            .user-info-wrapper .user-info a:hover {
+                text-decoration: none;
+            }
+
+        .user-info-wrapper .user-info .status-icon {
+            margin: 0px 5px;
+        }
+
+        .user-info-wrapper .user-info .collapse {
+            width: 18px;
+            height: 18px;
+            background-color: #000000;
+            position: absolute;
+            right: 15px;
+            margin-top: 10px;
+        }
+
+        .user-info-wrapper .user-info .status-icon {
+            margin: 0px 5px;
+        }
+
+        .user-info-wrapper .user-info .collapse i {
+            position: relative;
+            margin-top: -8px;
+            top: -2px;
+            left: 3px;
+        }
+
+        .user-info-wrapper .user-info .collapse:hover {
+            background-color: #000000;
+        }
+
+
+.page-sidebar {
+    background-color: #4b72b2 !important;
+    height: 100%;
+    font-family: 'Open Sans';
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+
+
+/********************************Progress     */
+.progress-assignments {
+    margin: 0px !important;
+    line-height: normal !important;
+}
+
+
+
+.html5-progress-bar {
+    /*padding: 15px 15px;*/
+    border-radius: 3px;
+    /*background-color: #fff;*/
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, .2);
+    margin: 0px !important;
+    line-height: normal !important;
+    position: relative !important;
+}
+
+    .html5-progress-bar progress {
+        background-color: #f3f3f3;
+        border: 1px;
+        /*width: 80%;*/
+        height: 16px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        margin: 0px !important;
+        line-height: normal !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: limegreen !important;
+    }
+
+
+
+        .html5-progress-bar progress::-webkit-progress-bar {
+            background-color: #f3f3f3;
+            border-radius: 9px;
+        }
+
+        .html5-progress-bar progress::-webkit-progress-value {
+            background: #cdeb8e;
+            background: -moz-linear-gradient(top, #cdeb8e 0%, #a5c956 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+            background: -webkit-linear-gradient(top, #cdeb8e 0%,#a5c956 100%);
+            background: -o-linear-gradient(top, #cdeb8e 0%,#a5c956 100%);
+            background: -ms-linear-gradient(top, #cdeb8e 0%,#a5c956 100%);
+            background: linear-gradient(to bottom, #cdeb8e 0%,#a5c956 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+            border-radius: 9px;
+        }
+
+        .html5-progress-bar progress::-moz-progress-bar {
+            background: #cdeb8e;
+            background: -moz-linear-gradient(top, #cdeb8e 0%, #a5c956 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cdeb8e), color-stop(100%,#a5c956));
+            background: -webkit-linear-gradient(top, #cdeb8e 0%,#a5c956 100%);
+            background: -o-linear-gradient(top, #cdeb8e 0%,#a5c956 100%);
+            background: -ms-linear-gradient(top, #cdeb8e 0%,#a5c956 100%);
+            background: linear-gradient(to bottom, #cdeb8e 0%,#a5c956 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cdeb8e', endColorstr='#a5c956',GradientType=0 );
+            border-radius: 9px;
+        }
+
+    .html5-progress-bar .progress-value {
+        /*padding: 0px 5px;*/
+        /*line-height: 20px;*/
+        /*margin-left: 5px;*/
+        /*font-size: .8em;*/
+        color: #2f4975;
+        font-weight: bold;
+        height: 18px;
+        float: right;
+        position: absolute;
+        left: 0;
+        top: 0;
+        text-align: center;
+        width: 100%;
+    }

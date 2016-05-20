@@ -1,0 +1,28 @@
+﻿<ion-view view-title="" hide-nav-bar="true" name="login-view" >
+
+    <ion-content class="padding" >
+        <div class="row">
+            <div class="col col-center">
+                <img src="images/logo_iproject.png" style="width:90%" />
+            </div>
+        </div>
+        <div class="list list-inset">
+            <label class="item item-input item-floating-label">
+                <span class="input-label"><i class="icon ion-earth placeholder-icon">&nbsp;Domínio</i></span>
+                <input type="text" placeholder="Ex: nimble.sharepoint.com/sites/pwa" ng-model="data.domain">
+            </label>
+        </div>
+        <div class="list list-inset">
+
+            <label class="item item-input">
+                <input type="text" placeholder="Usuário" ng-model="data.username">
+            </label>
+            <br />
+            <label class="item item-input">
+                <input type="password" placeholder="Senha" ng-model="data.password">
+            </label>
+        </div>
+        <button class="button icon-left ion-log-in button-block button-positive" ng-click="signIn()">Login</button>
+
+    </ion-content>
+</ion-view>

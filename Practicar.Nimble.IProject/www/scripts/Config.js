@@ -1,26 +1,32 @@
-﻿var myApp = angular.module('Nimble', [
+﻿var nimbleApp = angular.module('Nimble', [
   'ngRoute',
-  'myAppControllers'
+  'nimbleControllers'
 ]);
 
-myApp.config(['$routeProvider',
+nimbleApp.config(['$routeProvider',
   function ($routeProvider) {
       $routeProvider.
         when('/', {
-            templateUrl: 'Views/View-Inicial.html',
+            templateUrl: 'Views/dashboard/view-meuPortifolio.html',
             controller: 'ControllerInicial'
         }).
         when('/Sobre', {
             templateUrl: 'Views/View-Sobre.html',
             controller: 'ControllerSobre'
         }).
+        when('index.html', {
+            templateUrl: 'index.html',
+            controller: 'navBarInformacaoController'
+         }).
         otherwise({
-            redirectTo: '/'
+            redirectTo: '/',
+            controller: 'navBarInformacaoController'
+
         });
   }]);
 
 
-myApp.run(['$rootScope', function ($rootScope) {
+nimbleApp.run(['$rootScope', function ($rootScope) {
     var scope = Object.getPrototypeOf($rootScope);
     var old$Eval = scope.$eval;
     scope.$eval = function (expr, locals) {
@@ -34,3 +40,6 @@ myApp.run(['$rootScope', function ($rootScope) {
         }
     };
 }]);
+
+
+var nimbleControllers = angular.module('nimbleControllers', []);
