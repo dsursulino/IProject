@@ -1,0 +1,110 @@
+﻿.dash {
+}
+
+    .dash .not-padding-lateral {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .dash .bc-orange {
+        background-color: #ed7d31;
+        color: white;
+        font-weight: bold;
+        font-size: 15pt !important;
+    }
+
+    .dash .bc-yellow {
+        background-color: #ffc000;
+        color: white;
+        font-weight: bold;
+        font-size: 15pt !important;
+    }
+
+    .dash .bc-green {
+        background-color: #00b050;
+        color: white;
+        font-weight: bold;
+        font-size: 15pt !important;
+    }
+
+    .dash .bc-gray {
+        background-color: #A5A5A5;
+        color: white;
+        font-weight: bold;
+        font-size: 16pt !important;
+    }
+
+    .dash .tag-portifolio {
+        height: 40px !important;
+        text-align: center !important;        margin-bottom: 8px !important;
+
+    }
+
+    .dash .icon-title {
+        font-size: 16pt !important;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+. .dash .title {
+    font-size: 18pt !important;
+    color: #ffffff;
+    text-align: right;
+}
+
+.dash .sub-title {
+    font-size: 12pt !important;
+    color: #ffffff;
+}
+
+.dash .container-green {
+    background-color: #28B779 !important;
+    color: #ffffff !important;
+}
+
+    .dash .container-green .highcharts-legend tspan {
+        color: #ffffff !important;
+        fill: #ffffff !important;
+    }
+
+    .dash .container-green .highcharts-legend text {
+        color: #ffffff !important;
+        fill: #ffffff !important;
+    }
+
+.dash .container-clear {
+    background-color: #ffffff !important;
+    color: #28B779 !important;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+}
+
+    .dash .container-clear .icon-title {
+        font-size: 35pt !important;
+        color: #5e5f5e;
+        font-weight: normal !important;
+    }
+
+    .dash .container-clear .title {
+        font-size: 20pt !important;
+        color: #000000;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .dash .container-clear .sub-title {
+        font-size: 14pt !important;
+        color: #000000;
+        font-weight: normal !important;
+    }
+
+    .dash .container-clear .highcharts-legend tspan {
+        color: #5c5a5a !important;
+        fill: #5c5a5a !important;
+    }
+
+    .dash .container-clear .highcharts-legend text {
+        color: #5c5a5a !important;
+        fill: #5c5a5a !important;
+    }

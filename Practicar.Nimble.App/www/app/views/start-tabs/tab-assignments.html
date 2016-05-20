@@ -1,0 +1,59 @@
+﻿<ion-view view-title="Minhas Tarefas">
+
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-more-vertical" ng-click="openRightMenu()"></button>
+    </ion-nav-buttons>
+    <ion-content ng-init="GetTasks()">
+        <ion-refresher on-refresh="GetTasks()">
+
+        </ion-refresher>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <ul class="event-list">
+
+
+
+
+
+                        <li ng-repeat="assignment in Assignments" ng-click="edit('{{assignment.Id}}')"  type="item-text-wrap">
+
+                            <time datetime=""  ng-click="Edit('{{assignment.Id}}')">
+                                <span class="day">{{assignment.Start | momentFormat:'DD'}}</span>
+                                <span class="month">{{assignment.Start | momentFormat:'MMM'}}</span>
+                                <span class="year">{{assignment.Start | momentFormat:'YY'}}</span>
+                                <span class="time"></span>
+                            </time>
+                            <div class="info" style="padding-right:0px!important" ng-click="Edit('{{assignment.Id}}')">
+                                <h2 class="title"  ng-click="Edit('{{assignment.Id}}')" >{{assignment.Name}}</h2>
+                                <p class="desc">
+                                    {{assignment.Project.Name}}
+                                </p>
+                             
+                                <ul>
+                                    <li style="width:30%;"><span class="icon ion-flag"></span><span style="font-size:8pt">{{assignment.ApprovalStatus|ApprovalStatusFormat}}</span></li>
+                                    <li  style="width:70%;"><span class="icon ion-clock"></span><span style="font-size:8pt">{{assignment.Finish|timeago}}</span></li>
+                                </ul>
+                                <div class="html5-progress-bar">
+                                    <progress ng-attr-id="{{assignment.Id}}" repeat-done="LoadPercentComplete()" name="progressAssignmentPercentWorkCompleted" max="100" data-value="{{assignment.PercenteComplete}}"  class="progress-assignments"> </progress>
+                                    <div ng-attr-id="{{'label'+assignment.Id}}" class="progress-value">{{assignment.PercentComplete}}%</div>
+                                </div>
+
+                            </div>
+
+
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </ion-content>
+</ion-view>

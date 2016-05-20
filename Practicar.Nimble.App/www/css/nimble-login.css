@@ -1,0 +1,190 @@
+﻿.nimble-login .item-floating-label {
+}
+
+.nimble-login .item-input input {
+}
+
+
+.nimble-login .item-floating-label .placeholder-icon {
+    position: absolute;
+    bottom: 9px;
+}
+
+.nimble-login .item-floating-label {
+    padding-left: 0px !important;
+}
+
+.nimble-login .item-floating-label {
+    padding-left: 0px !important;
+}
+
+.nimble-login .input-label {
+    color: #21589e !important;
+}
+
+.nimble-login .button-nimble 
+{
+    color:#ffffff !important;
+    background-color: #21589e !important;
+    border-color: #a2cff0 !important;
+
+}
+.nimble-login .fieldsGroup {
+    display: block;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+/* form starting stylings ------------------------------- */
+.nimble-login .group {
+    position: relative;
+}
+
+.nimble-login input {
+    /*font-size: 18px;*/
+    padding: 0px 0px 0px 17px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #a2cff0;
+    color:#21589e;
+}
+
+    .nimble-login input:focus {
+        outline: none;
+    }
+
+/* LABEL ======================================= */
+/*.nimble-login label {
+    color: #21589e;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}*/
+
+/* active state */
+.nimble-login input:focus ~ label, input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #5b87c1;
+}
+
+/* BOTTOM BARS ================================= */
+.nimble-login .bar-in {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+    .nimble-login .bar-in:before, .bar-in:after {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 1px;
+        position: absolute;
+        background: #21589e;
+        transition: 0.2s ease all;
+        -moz-transition: 0.2s ease all;
+        -webkit-transition: 0.2s ease all;
+    }
+
+    .nimble-login .bar-in:before {
+        left: 50%;
+    }
+
+    .nimble-login .bar-in:after {
+        right: 50%;
+    }
+
+/* active state */
+.nimble-login input:focus ~ .bar-in:before, input:focus ~ .bar-in:after {
+    width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.nimble-login .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* active state */
+.nimble-login input:focus ~ .highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from {
+        /*background: #5264AE;*/
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        /*background: #5264AE;*/
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        /*background: #5264AE;*/
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+/************************************************************************************************************/
+
+.nimble-login .error-container {
+  margin: 0px;
+}
+
+.nimble-login .error-container:last-child {
+    margin: 0px;
+}
+
+.nimble-login .error {
+  color: #555;
+  vertical-align: middle;
+}
+
+.nimble-login .error i {
+  color: #B83E2C;  
+  vertical-align: middle;
+}
+
+.nimble-login .last-error-container > .error {
+}
+
+.nimble-login .has-errors {
+  border-bottom: 2px solid #B83E2C;
+}
+
+.nimble-login .no-errors {
+  border-bottom: 1px solid green;
+}

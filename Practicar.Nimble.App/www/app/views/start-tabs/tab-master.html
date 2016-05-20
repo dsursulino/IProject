@@ -1,0 +1,25 @@
+﻿<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+<ion-nav-buttons side="right">
+    <button class="button button-icon button-clear ion-android-more-vertical" ng-click="openRightMenu()"></button>
+</ion-nav-buttons>
+
+<div class="tab-nimble">
+    <ion-tabs class=" tabs-icon-top  tabs-top">
+
+        <ion-tab title="Meus Projetos" icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong" href="#/startTabs/projects">
+            <ion-nav-view name="tab-projects"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Minhas Tarefas" icon-off="ion-clipboard" icon-on="ion-clipboard" href="#/startTabs/assignments">
+            <ion-nav-view name="tab-assignments"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Aprova&ccedil;&otilde;es" icon-off="ion-android-checkmark-circle" icon-on="ion-android-checkmark-circle" href="#/startTabs/workflowTasks">
+            <ion-nav-view name="tab-workflowTasks"></ion-nav-view>
+        </ion-tab>
+
+    </ion-tabs>
+</div>

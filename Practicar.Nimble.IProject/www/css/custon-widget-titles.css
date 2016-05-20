@@ -1,0 +1,46 @@
+﻿.teste {
+}
+
+.dynamicTile .col-tile {
+    padding: 5px !important;
+}
+
+.dynamicTile .DarkOrange {
+    background: #FF8C00;
+    color: white;
+}
+
+.dynamicTile .DodgerBlue {
+    background: #1E90FF;
+    color: white;
+}
+
+.dynamicTile .LightGreen {
+    background: #32CD32;
+    color: white;
+}
+
+.dynamicTile .Khaki {
+    background: #B8860B;
+    color: white;
+}
+
+.dynamicTile .Salmon {
+    background: #FA8072;
+    color: white;
+}
+
+
+.tilecaption {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    margin: 0 !important;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    height: 100%;
+    vertical-align: middle;
+}

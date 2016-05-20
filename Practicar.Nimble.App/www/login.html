@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/nimble-custom.css" rel="stylesheet" />
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+    <script src="scripts/winstore-jscompat.js"></script>
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="lib/ionic/js/ionic.min.js"></script>
+    <script src="lib/ionic/js/ionic-angular.min.js"></script>
+    <script src="lib/ionic/js/angular/angular.min.js"></script>
+    <script src="lib/ionic/js/angular/angular-resource.min.js"></script>
+    <script src="lib/ionic/js/angular/angular-sanitize.min.js"></script>
+    <script src="lib/ionic/js/angular-ui/angular-ui-router.min.js"></script>
+    <script src="scripts/jquery-2.1.4.min.js"></script>
+    <script src="lib/morris-charts/morris.min.js"></script>
+    <script src="lib/jquery-easy-pie-chart/js/jquery.easypiechart.min.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/factory/utilFactory.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/spAuthService.js"></script>
+</head>
+<body ng-app="starter">
+
+    <ion-view view-title="" hide-nav-bar="true" name="login-view" ng-controller="LoginCtrl">
+
+        <ion-content class="padding">
+            <div class="row">
+                <div class="col col-center">
+                    <img src="images/logo_iproject.png" style="width:90%" />
+                </div>
+            </div>
+            <div class="list list-inset">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label"><i class="icon ion-earth placeholder-icon">&nbsp;Domínio</i></span>
+                    <input type="text" placeholder="Domínio" ng-model="data.domain">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label"><i class="icon ion-earth placeholder-icon">&nbsp;Usuário</i></span>
+                    <input type="text" placeholder="Usuário" ng-model="data.username">
+                </label>
+                <label class="item item-input item-floating-label">
+                    <span class="input-label"><i class="icon ion-earth placeholder-icon">&nbsp;Senha</i></span>
+                    <input type="password" placeholder="Senha" ng-model="data.password">
+                </label>
+            </div>
+            <!--<div class="list list-inset">
+
+                <label class="item item-input">
+                    <input type="text" placeholder="Usuário" ng-model="data.username">
+                </label>
+                <br />
+                <label class="item item-input">
+                    <input type="password" placeholder="Senha" ng-model="data.password">
+                </label>
+            </div>-->
+            <button class="button icon-left ion-log-in button-block button-positive" ng-click="signIn()">Login</button>
+
+        </ion-content>
+    </ion-view>
+</body>
+</html>

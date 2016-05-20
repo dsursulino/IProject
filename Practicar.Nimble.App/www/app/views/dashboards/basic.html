@@ -1,0 +1,50 @@
+﻿<ion-view view-title="Dashboard" hide-back-button="true">
+    <ion-nav-buttons side="left">
+
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-more-vertical" ng-click="openRightMenu()"></button>
+    </ion-nav-buttons>
+    <ion-content class="dash">
+        <div class="row">
+            <div class="col container-clear item ">
+                <div class="row">
+                    <div class="col">
+                        <span class="ion-ios-pulse-strong icon-title"></span>
+                    </div>
+                    <div class="col title">
+                        {{dataMyprojects.count}}
+                        <p class="sub-title">Projetos</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="divMyProjects" style="width: 100%; margin-top: -55px !important; margin-bottom: -20px !important; min-height: 150px !important; min-width: 200px;">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col container-clear item ">
+                <div class="row">
+                    <div class="col">
+                        <span class="ion-clipboard icon-title"></span>
+                    </div>
+                    <div class="col title">
+                        {{dataMyTasks.count}}
+                        <p class="sub-title">Tarefas</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="divMyTasks" style="width: 100%; margin-top: -40px !important;  margin-bottom: -20px !important; min-height: 205px !important; min-width: 200px;">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
