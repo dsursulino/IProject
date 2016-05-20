@@ -16,19 +16,18 @@ angular.module('nimble.controllers.tabAssignments', [])
 
 
                 progressbar.val(value);
-                var taskid = progressbar.attr('data-taskid');
-
-                $timeout(function () {
-                    assignmentService.getAssignedsCount(taskid).success(function (data) {
-                        $('#span' + taskid).text(data);
-                    }).error(function (data) {
-                        var alertPopup = $ionicPopup.alert({
-                            title: 'Processamento inválido',
-                            template: data
-                        });
-                        $('#span' + taskid).text('-');
-                    });
-                },2);
+                //var taskid = progressbar.attr('data-taskid');
+                //$timeout(function () {
+                //    assignmentService.getAssignedsCount(taskid).success(function (data) {
+                //        $('#span' + taskid).text(data);
+                //    }).error(function (data) {
+                //        var alertPopup = $ionicPopup.alert({
+                //            title: 'Processamento inválido',
+                //            template: data
+                //        });
+                //        $('#span' + taskid).text('-');
+                //    });
+                //},2);
 
 
             });
@@ -45,16 +44,26 @@ angular.module('nimble.controllers.tabAssignments', [])
     };
    
 
-    $scope.Assignments = assignmentService.getOwner().success(function (data) {
-        $scope.Assignments = data.results;
-        $scope.$broadcast('scroll.refreshComplete');
-    }).error(function (data) {
-        var alertPopup = $ionicPopup.alert({
-            title: 'Processamento inválido',
-            template: data
+      $scope.GetTasks= function GetTasks() {
+        
+    
+
+        $scope.Assignments = assignmentService.getOwner().success(function (data) {
+            $scope.Assignments = data.results;
+            $scope.$broadcast('scroll.refreshComplete');
+        }).error(function (data) {
+            var alertPopup = $ionicPopup.alert({
+                title: 'Processamento inválido',
+                template: data
+            });
+            $scope.$broadcast('scroll.refreshComplete');
         });
-        $scope.$broadcast('scroll.refreshComplete');
-    });
+
+
+    };
+
+
+   
 
     $scope.openRightMenu = function () {
         $ionicSideMenuDelegate.toggleRight();

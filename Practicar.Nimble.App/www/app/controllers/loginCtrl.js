@@ -22,6 +22,8 @@ angular.module('nimble.controllers.Login', [])
                 maxWidth: 200,
                 showDelay: 0
             });
+                
+
 
             if (data.domain == 'debug') {
                 $scope.data.domain = 'https://practicarcloud.sharepoint.com/PWA',

@@ -13,6 +13,28 @@ angular.module('nimble.filters', [])
         };
     }
 ])
+.filter('ApprovalStatusFormat', [
+'$filter', function ($filter) {
+    return function (input, format) {
+        if (input == 1) {
+            return 'Aprovado';
+        }
+        else
+            return 'Pendente';
+    };
+}
+])
+.filter('momentFormat', [
+    '$filter', function ($filter) {
+        return function (input, format) {
+            if (input != null) {
+                return moment(input).locale("pt-br").format(format);
+            }
+            else
+                return '-';
+        };
+    }
+])
 .filter('timeago', function () {
     return function (input, p_allowFuture) {
 
@@ -24,7 +46,7 @@ angular.module('nimble.filters', [])
             },
 
                 nowTime = (new Date()).getTime(),
-                date = (new Date(parseInt(input.substr(6)))).getTime(),
+                date = (moment(input).toDate()).getTime(),           // (new Date(parseInt(input.substr(6)))).getTime(),
                 //refreshMillis= 6e4, //A minute
                 allowFuture = p_allowFuture || true,
                 strings = {

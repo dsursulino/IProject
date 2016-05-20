@@ -49,8 +49,8 @@ angular.module('starter.spAuthFactory', [])
 
         if (deferred.promise.$$state.status == 1) {
             _oAuth.IsAuthenticate = true;
-            _oAuth.User.Login = userId;
-            _oAuth.User.Password = password;
+            _oAuth.User.Login = $crypto.encrypt(userId);
+            _oAuth.User.Password = $crypto.encrypt(password);
 
             $.ajax({
 

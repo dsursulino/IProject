@@ -158,7 +158,7 @@ angular.module('nimble.controllers.dashboardBasic', [])
 
     }
 
-    
+
 
     $scope.RefreshData = function () {
 
@@ -183,7 +183,7 @@ angular.module('nimble.controllers.dashboardBasic', [])
             });
             $scope.FillMyProjects(dataMyprojects)
             $scope.dataMyprojects = dataMyprojects;
-          //  $scope.$broadcast('scroll.refreshComplete');
+            //  $scope.$broadcast('scroll.refreshComplete');
         }).error(function (data) {
             var alertPopup = $ionicPopup.alert({
                 title: 'Processamento inválido',
@@ -246,13 +246,13 @@ angular.module('nimble.controllers.dashboardBasic', [])
                     }
                     else {
                         dataMyTasks.lastMonth.countStarted++;
-                        dataMyTasks.countStarted++;
+                        //dataMyTasks.countStarted++;
                     }
                 }
                 //Actual
                 if ((value.AssignmentStartDate.getMonth() <= now.getMonth() && value.AssignmentFinishDate.getMonth() >= now.getMonth()) || value.AssignmentStartDate.getMonth() == now.getMonth() || value.AssignmentFinishDate.getMonth() == now.getMonth()) {
 
-                    if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now) {
+                    if (value.AssignmentPercentWorkCompleted < 100 && value.AssignmentFinishDate < now ) {
                         dataMyTasks.actualMonth.countDelayed++;
                     }
                     else if (value.AssignmentPercentWorkCompleted >= 100) {
@@ -261,9 +261,13 @@ angular.module('nimble.controllers.dashboardBasic', [])
                     else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate > now) {
                         dataMyTasks.actualMonth.countFuture++;
                     }
-                    else {
+                    else if (value.AssignmentPercentWorkCompleted == 0 && value.AssignmentStartDate < now) {
+                        dataMyTasks.actualMonth.countDelayed++;
+                        //dataMyTasks.countStarted++;
+                    }
+                    else if (value.AssignmentPercentWorkCompleted > 0 && value.AssignmentFinishDate > now) {
                         dataMyTasks.actualMonth.countStarted++;
-                        dataMyTasks.countStarted++;
+                        //dataMyTasks.countStarted++;
                     }
                 }
                 //future
@@ -280,9 +284,12 @@ angular.module('nimble.controllers.dashboardBasic', [])
                     }
                     else {
                         dataMyTasks.actualMonth.countStarted++;
-                        dataMyTasks.countStarted++;
+                        //dataMyTasks.countStarted++;
                     }
                 }
+
+                if (value.AssignmentPercentWorkCompleted > 0 && value.AssignmentPercentWorkCompleted < 100)
+                    dataMyTasks.countStarted++;
             });
             $scope.FillMyTasks2(dataMyTasks);
             $scope.dataMyTasks = dataMyTasks;

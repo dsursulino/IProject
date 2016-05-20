@@ -2,6 +2,8 @@
 /// <reference path="../../lib/office/SP.js" />
 /// <reference path="../../lib/office/sp.requestexecutor.js" />
 
+
+
 angular.module('nimble.service.assignment', [])
 .service('assignmentService', function ($http, $q, $localstorage, $filter) {
 
@@ -22,8 +24,9 @@ angular.module('nimble.service.assignment', [])
         }
 
 
-        var comand = oAuth.ProjectURL + "/_api/ProjectData/[en-US]/Assignments?$filter=AssignmentId eq guid'" + id + "'";;
+        //var comand = oAuth.ProjectURL + "/_api/ProjectData/[en-US]/Assignments?$filter=AssignmentId eq guid'" + id + "'";;
 
+        var comand = oAuth.ProjectURL + "/_api/ProjectServer/EnterpriseResources('" + oAuth.User.Profile.ResourceId + "')/Assignments('"+id+"')?$orderby=Start&$expand=Project,Task";
 
 
 
@@ -38,7 +41,7 @@ angular.module('nimble.service.assignment', [])
             },
             success: function (data) {
                 try {
-                    deferred.resolve(data.d.results[0]);
+                    deferred.resolve(data.d);
 
                 } catch (e) {
                     deferred.reject("Solicitação não realizada : " + e);
@@ -63,7 +66,7 @@ angular.module('nimble.service.assignment', [])
         return promise;
 
     };
-
+    
     this.getOwner = function () {
 
 
@@ -85,7 +88,12 @@ angular.module('nimble.service.assignment', [])
             deferred.reject("Você não possui tarefas, pois não esta associado a lista de recursos do Project Server.");
             return deferred;
         }
-            var comand = oAuth.ProjectURL + "/_api/ProjectData/[en-US]/Assignments?$filter=ResourceId eq guid'" + oAuth.User.Profile.ResourceId + "' and AssignmentPercentWorkCompleted lt 100  &$orderby=AssignmentStartDate";
+
+        //https://practicarcloud.sharepoint.com/sites/pwa/_api/ProjectServer/EnterpriseResources('1104bbeb-dace-e311-b8fc-00155d6c2709')/Assignments
+        //    var comand = oAuth.ProjectURL + "/_api/ProjectData/[en-US]/Assignments?$filter=ResourceId eq guid'" + oAuth.User.Profile.ResourceId + "' and AssignmentPercentWorkCompleted lt 100  &$orderby=AssignmentStartDate";
+
+
+        var comand = oAuth.ProjectURL + "/_api/ProjectServer/EnterpriseResources('" + oAuth.User.Profile.ResourceId + "')/Assignments?$orderby=Start&$expand=Project,Task";
 
         $.ajax({
 
@@ -315,94 +323,78 @@ angular.module('nimble.service.assignment', [])
 
 
 
-        //$.support.cors = true; // enable cross-domain query
-        //$.ajax({
-        //    type: 'POST',
-        //    data: oAuth.SecurityToken,
-        //    crossDomain: true, // had no effect, see support.cors above
-        //    contentType: 'text/xml; charset="utf-8"',
-        //    url: oAuth.ProjectURL + '/_vti_bin/sites.asmx',
-        //    headers: {
-        //        'SOAPAction': 'http://schemas.microsoft.com/sharepoint/soap/GetUpdatedFormDigestInformation',
-        //        'X-RequestForceAuthentication': 'true'
-        //    },
-        //    dataType: 'xml',
-        //    success: function (data, textStatus, result) {
-        //        digest = $(result.responseXML).find("DigestValue").text();
-        //        //     sendRESTReq();
-        //    },
-        //    error: function (result, textStatus, errorThrown) {
-        //        var response = JSON.parse(result.responseText);
-        //        if ((response.error != undefined) && (response.error.message != undefined)) {
-        //            alert(response.error.message.value);
-        //        }
-        //    }
-        //});
+        $.ajax({
 
-
-
-
-
-
-        //    var projContext = new PS.ProjectContext(oAuth.ProjectURL);
-
-        //var factory = new SP.ProxyWebRequestExecutorFactory(oAuth.ProjectURL);
-
-        //projContext.set_webRequestExecutorFactory(factory);
-
-        //var appContextSite = new SP.AppContextSite(projContext, oAuth.ProjectURL);
-
-        //var executor = new SP.RequestExecutor(oAuth.ProjectURL);
-
-
-
-
-
-        //var assingmentContext = projContext.get_enterpriseResources().getByGuid(oAuth.User.Profile.ResourceId).get_assignments().getByGuid(assingment.AssignmentId);
-
-
-
-        var factory;
-        var appContextSite;
-        var collList;
-        var url = window.location.href;
-        //Get the client context of the AppWebUrl
-        context = new SP.ClientContext(oAuth.ProjectURL);
-        //Get the ProxyWebRequestExecutorFactory
-        factory = new SP.ProxyWebRequestExecutorFactory(oAuth.ProjectURL);
-        //Assign the factory to the client context.
-        context.set_webRequestExecutorFactory(factory);
-        //Get the app context of the Host Web using the client context of the Application.
-        appContextSite = new SP.AppContextSite(context, oAuth.ProjectURL);
-        //Get the Web
-        this.web = appContextSite.get_web();
-        //Load Web.
-        context.load(this.web);
-
-
-
-        //      projContext.load(assingmentContext);
-
-        context.executeQueryAsync(function () {
-
-
-            var nome = assingmentContext.get_name();
-            var percentual = assingmentContext.get_percentComplete();
-
-            assingmentContext.set_percentComplete(assingment.AssignmentPercentWorkCompleted);
-            assingmentContext.submitStatusUpdates("Nimble: " + assingment.AssignmentComment);
-
-            //projContext.get_enterpriseResources().getByGuid(oAuth.User.Profile.ResourceId).get_assignments().update();
-
-            //projContext.executeQueryAsync(function () {
-            //    deferred.resolve('Atualizado com sucesso.');
-            //}, function (error) {
-            //    deferred.reject("Não foi possível atualizar a tarefa . ");
-            //});
-
-        }, function (er, a) {
-            deferred.reject("Tarefa não encontrada. Tente novamente. :" + a.get_message());
+            method: 'POST',
+            url: 'http://appnimble.practicar.com.br/AssignmentService.svc/Update/10',
+            async: false,
+            data: JSON.stringify({ _oAuth: oAuth, _value: assingment }),
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                try {
+                    deferred.resolve(data);
+                } catch (e) {
+                    deferred.reject("Solicitação não realizada : " + e);
+                }
+            },
+            error: function (result, textStatus, errorThrown) {
+                result = angular.fromJson(result);
+                var exeception = angular.fromJson(result.responseText);
+                deferred.reject(exeception.error.message.value);
+            }
         });
+
+
+        //var projContext;
+        //var pwaWeb;
+        //var projUser;
+
+        //projContext = new PS.ProjectContext(oAuth.ProjectURL)
+        //projContext = PS.ProjectContext.get_current();
+        //pwaWeb = projContext.get_web();
+
+
+        //var factory;
+        //var appContextSite;
+        //var collList;
+        //var url = window.location.href;
+        ////Get the client context of the AppWebUrl
+        //context = new SP.ClientContext(oAuth.ProjectURL);
+        ////Get the ProxyWebRequestExecutorFactory
+        //factory = new SP.ProxyWebRequestExecutorFactory(oAuth.ProjectURL);
+        ////Assign the factory to the client context.
+        //context.set_webRequestExecutorFactory(factory);
+        ////Get the app context of the Host Web using the client context of the Application.
+        //appContextSite = new SP.AppContextSite(context, oAuth.ProjectURL);
+        ////Get the Web
+        //this.web = appContextSite.get_web();
+        ////Load Web.
+        //context.load(this.web);
+
+
+
+        ////      projContext.load(assingmentContext);
+
+        //context.executeQueryAsync(function () {
+
+
+        //    var nome = assingmentContext.get_name();
+        //    var percentual = assingmentContext.get_percentComplete();
+
+        //    assingmentContext.set_percentComplete(assingment.AssignmentPercentWorkCompleted);
+        //    assingmentContext.submitStatusUpdates("Nimble: " + assingment.AssignmentComment);
+
+        //    //projContext.get_enterpriseResources().getByGuid(oAuth.User.Profile.ResourceId).get_assignments().update();
+
+        //    //projContext.executeQueryAsync(function () {
+        //    //    deferred.resolve('Atualizado com sucesso.');
+        //    //}, function (error) {
+        //    //    deferred.reject("Não foi possível atualizar a tarefa . ");
+        //    //});
+
+        //}, function (er, a) {
+        //    deferred.reject("Tarefa não encontrada. Tente novamente. :" + a.get_message());
+        //});
 
 
 
